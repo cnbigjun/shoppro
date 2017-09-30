@@ -5,7 +5,7 @@
             @foreach ($cate_list['cates'] as $list)
 
                 <li class="submenu">
-                    <a href="#"><i class="icon icon-th-list"></i> <span>{{$list->cate_name}}</span> <span class="label">
+                    <a href="{{$list->url}}"><i class="icon icon-th-list"></i> <span>{{$list->cate_name}}</span> <span class="label">
                     @if($list->son_num <= 0)
 
                     @else
@@ -15,7 +15,7 @@
                     <ul>
                     @foreach($cate_list['son'] as $son)
                         @if($son->parent_id == $list->cate_id)
-                        <li><a href="form-common.html">{{$son->cate_name}}</a></li>
+                        <li><a href="{{$son->url}}">{{$son->cate_name}}</a></li>
                         @endif
                     @endforeach
                     </ul>

@@ -32,3 +32,7 @@ Route::get('auth/logout','Admin\UsersController@getlogout');
 // 栏目管理
 Route::get('admin/cate', 'Admin\CateController@index');
 Route::get('admin/cate_list', 'Admin\CateController@cate_list');
+
+Route::get('admin/buttons',function (){
+    return view('admin/buttons');
+});
