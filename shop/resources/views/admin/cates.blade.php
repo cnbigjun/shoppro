@@ -43,8 +43,8 @@
     @include('admin.Base.sidebar')
 @stop
 @section('content')
-    <<div class="wrap">
-        <div class="page-title">
+    <<div id="content">
+        <div id="content-header">
             <span class="modular fl"><i></i><em>产品列表</em></span>
             <span class="modular fr"><a href="edit_product.html" class="pt-link-btn">+添加商品</a></span>
         </div>
