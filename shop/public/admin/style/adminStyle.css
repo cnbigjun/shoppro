@@ -23,20 +23,20 @@ input,button,select,img{vertical-align:middle;}
 .labelBtn2{background:#96aecd;padding:5px 15px;color:#fff;}
 .labelBtn2:hover{background:#a0b7d4;}
 .trbgcolor{background:#f1f1f1;}
-/*.loginform{position:absolute;top:0;overflow:hidden;width:25%;margin:10% 37.5% 0 37.5%;overflow:hidden;background:rgba(204,204,204,.5);padding:2em;border-radius:5px;box-shadow:0 0 10px #999;}
+.loginform{position:absolute;top:0;overflow:hidden;width:25%;margin:10% 37.5% 0 37.5%;overflow:hidden;background:rgba(204,204,204,.5);padding:2em;border-radius:5px;box-shadow:0 0 10px #999;}
 .loginform h1{text-align:center;text-shadow:0 0 5px white;color:#666;font-weight:bold;margin:1.5em 0;font-size:1.2rem;}
 .loginform li{overflow:hidden;margin:8px 0;}
 .loginform li input{outline:none;}
 .loginform li label{display:block;background:rgba(153,153,153,.7);color:white;width:60px;height:28px;line-height:28px;text-align:center;border-radius:2px 2px 0 0;}
 .loginform li .textBox{width:94%;height:26px;line-height:26px;border:none;background:rgba(153,153,153,.5);padding:.5rem 3%;color:white;}
-.loginform li ::-webkit-input-placeholder {color:#fff;line-height:26px;} 
-.loginform li :-moz-placeholder {color:#fff;line-height:26px;} 
-.loginform li ::-moz-placeholder {color:#fff;line-height:26px;} 
+.loginform li ::-webkit-input-placeholder {color:#fff;line-height:26px;}
+.loginform li :-moz-placeholder {color:#fff;line-height:26px;}
+.loginform li ::-moz-placeholder {color:#fff;line-height:26px;}
 .loginform li input[type="button"]{height:3.5rem;background:none;border:none;width:100%;padding:0;background:#999;color:white;font-size:1rem;-webkit-appearance:none;}
 .loginform li input::-webkit-input-placeholder {color: #fff !important;}
 .loginform li input:-moz-placeholder {color: #fff !important;}
 .loginform li input::-moz-placeholder {color: #fff !important;}
-.loginform li input:-ms-input-placeholder {color: #fff !important;}*/
+.loginform li input:-ms-input-placeholder {color: #fff !important;}
 /*start*/
 .header{background:#3d3d3d;color:#fff;height:75px;border-bottom:1px #383838 solid;}
 .logo{float:left;margin:0 20px;}
@@ -115,14 +115,14 @@ input,button,select,img{vertical-align:middle;}
 .noborder td{padding:5px;}
 /*BatchOperation*/
 .BatchOperation{margin:1em 0;}
-.BatchOperation .btnStyle{background:#555555;border:1px #666666 solid;font-size:14px;color:#fff;padding:5px 15px;cursor:pointer;}
+.BatchOperation .btnStyle{display:inline-block;background:#555555;border:1px #666666 solid;font-size:14px;color:#fff;padding:5px 15px;cursor:pointer;}
 .BatchOperation .btnStyle:hover{background:#6c6c6c;}
 /*turnPage*/
 .turnPage{margin:1em 0;}
 .turnPage a{display:inline-block;border:1px #8ca3c0 solid;padding:5px 10px;cursor:pointer;background:#96aecd;color:#fff;}
 .turnPage a:hover{background:#85a4cb;}
 /*pulicForm*/
-.textBox{padding:5px;border:1px #999 solid;}
+.textBox{margin:10px;padding:5px;border:1px #999 solid;}
 .inline-select{padding:4px;border:1px #999 solid;}
 .length-long{width:300px;}
 .length-middle{width:220px;}
@@ -130,6 +130,7 @@ input,button,select,img{vertical-align:middle;}
 .textarea{border:1px #999 solid;width:500px;height:180px;}
 .tdBtn{border:1px #999 solid;background:#f1f1f1;padding:5px 15px;border-radius:2px;cursor:pointer;}
 .tdBtn:hover{background:#e8e8e8;}
+.tdmargin{margin:auto 10px;}
 /* fallback placeholder */
 .placeholder, ::-webkit-input-placeholder, :-moz-placeholder, :-ms-placeholder, ::placeholder{ color:#bbb;}
 /* ds.dialog */

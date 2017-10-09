@@ -46,73 +46,45 @@
     <div id="content">
         <div class="wrap">
             <div class="page-title">
-                <span class="modular fl"><i></i><em>产品分类</em></span>
-                <span class="modular fr"><a href="add_category.html" class="pt-link-btn">+添加新分类</a></span>
+                <span class="modular fl"><i></i><em>商品回收站</em></span>
             </div>
 
             <table class="list-style">
                 <tr>
-                    <th>分类名称</th>
-                    <th>产品数量</th>
-                    <th>单位</th>
-                    <th>是否显示</th>
-                    <th>排序</th>
+                    <th>ID编号</th>
+                    <th>产品</th>
+                    <th>名称</th>
+                    <th>删除时间</th>
                     <th>操作</th>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox"/>
-                        <span>西餐</span>
+     <span>
+     <input type="checkbox" class="middle children-checkbox"/>
+     <i>0</i>
+     </span>
                     </td>
-                    <td class="center">1</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
+                    <td class="center pic-area"><img src="#" class="thumbnail"/></td>
+                    <td class="td-name">
+                        <span class="ellipsis td-name block">这是产品或服务名称(宽度350px,样式自动截取，以省略号表示哦，程序可以处理“截取字符串”)</span>
                     </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox"/>
-                        <span>西餐</span>
+                    <td class="center">
+                        <span>2015-04-17</span>
                     </td>
-                    <td class="center">1</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
+                    <td class="center">
+                        <a href="#" title="恢复" target="_blank">恢复</a>
+                        <a href="#" title="彻底删除">彻底删除</a>
                     </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
                 </tr>
             </table>
-
             <!-- BatchOperation -->
             <div style="overflow:hidden;">
                 <!-- Operation -->
                 <div class="BatchOperation fl">
                     <input type="checkbox" id="del"/>
                     <label for="del" class="btnStyle middle">全选</label>
-                    <input type="button" value="批量删除" class="btnStyle"/>
+                    <input type="button" value="批量彻底删除" class="btnStyle"/>
+                    <input type="button" value="批量恢复" class="btnStyle"/>
                 </div>
                 <!-- turn page -->
                 <div class="turnPage center fr">

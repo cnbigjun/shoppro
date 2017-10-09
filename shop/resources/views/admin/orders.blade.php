@@ -46,73 +46,62 @@
     <div id="content">
         <div class="wrap">
             <div class="page-title">
-                <span class="modular fl"><i></i><em>产品分类</em></span>
-                <span class="modular fr"><a href="add_category.html" class="pt-link-btn">+添加新分类</a></span>
+                <span class="modular fl"><i class="order"></i><em>订单列表</em></span>
             </div>
-
-            <table class="list-style">
+            <div class="operate">
+                <form>
+                    <img src="images/icon_search.gif"/>
+                    <input type="text" class="textBox length-long" placeholder="输入订单编号或收件人姓名..."/>
+                    <select class="inline-select">
+                        <option>未付款</option>
+                        <option>已付款</option>
+                    </select>
+                    <input type="button" value="查询" class="tdBtn"/>
+                </form>
+            </div>
+            <table class="list-style Interlaced">
                 <tr>
-                    <th>分类名称</th>
-                    <th>产品数量</th>
-                    <th>单位</th>
-                    <th>是否显示</th>
-                    <th>排序</th>
+                    <th>订单编号</th>
+                    <th>下单时间</th>
+                    <th>收件人</th>
+                    <th>订单金额</th>
+                    <th>订单状态</th>
                     <th>操作</th>
                 </tr>
                 <tr>
                     <td>
                         <input type="checkbox"/>
-                        <span>西餐</span>
+                        <a href="order_detail.html">2015041803225</a>
                     </td>
-                    <td class="center">1</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
+                    <td class="center">
+                        <span class="block">DeatGhost</span>
+                        <span class="block">2015-04-18 12:00</span>
                     </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox"/>
-                        <span>西餐</span>
+                    <td width="450">
+                        <span class="block">张三[18309275673]</span>
+                        <address>陕西省西安市未央区255号</address>
                     </td>
-                    <td class="center">1</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
+                    <td class="center">
+                        <span><i>￥</i><b>58.00</b></span>
                     </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
+                    <td class="center">
+                        <span>未付款</span>
+                    </td>
+                    <td class="center">
+                        <a href="order_detail.html" class="inline-block" title="查看订单"><img src="images/icon_view.gif"/></a>
+                        <a class="inline-block" title="删除订单"><img src="images/icon_trash.gif"/></a>
+                    </td>
                 </tr>
             </table>
-
             <!-- BatchOperation -->
             <div style="overflow:hidden;">
                 <!-- Operation -->
                 <div class="BatchOperation fl">
                     <input type="checkbox" id="del"/>
-                    <label for="del" class="btnStyle middle">全选</label>
-                    <input type="button" value="批量删除" class="btnStyle"/>
+                    <label for="del" class="btnStyle">全选</label>
+                    <input type="button" value="打印订单" class="btnStyle"/>
+                    <input type="button" value="配货" class="btnStyle"/>
+                    <input type="button" value="删除订单" class="btnStyle"/>
                 </div>
                 <!-- turn page -->
                 <div class="turnPage center fr">

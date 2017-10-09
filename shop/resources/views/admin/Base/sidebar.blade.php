@@ -1,7 +1,7 @@
 <div id="sidebar">
         <!-- <a href="#" class="visible-phone"><i class="icon icon-home"></i> 首页</a> -->
         <ul>
-            <li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>首页</span></a></li>
+            <li class=""><a href="{{url('admin/index')}}"><i class="icon icon-home"></i> <span>首页</span></a></li>
             @foreach ($cate_list['cates'] as $list)
 
                 <li class="submenu">
@@ -25,10 +25,11 @@
 
     </div>
 
-    <div id="style-switcher">
-        <i class="icon-arrow-left icon-white"></i>
-        <span>Style:</span>
-        <a href="#grey" style="background-color: #555555;border-color: #aaaaaa;"></a>
-        <a href="#blue" style="background-color: #2D2F57;"></a>
-        <a href="#red" style="background-color: #673232;"></a>
-    </div>
+    {{--<div id="style-switcher">--}}
+
+        {{--<i class="icon-arrow-left icon-white"></i>--}}
+        {{--<span>Style:</span>--}}
+        {{--<a href="#grey" style="background-color: #555555;border-color: #aaaaaa;"></a>--}}
+        {{--<a href="#blue" style="background-color: #2D2F57;"></a>--}}
+        {{--<a href="#red" style="background-color: #673232;"></a>--}}
+    {{--</div>--}}

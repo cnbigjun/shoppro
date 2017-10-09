@@ -30,13 +30,36 @@ Route::post('admin/login','Admin\AuthController@postlogin');
 Route::get('auth/logout','Admin\UsersController@getlogout');
 
 // 栏目管理
-Route::get('admin/cate', 'Admin\CateController@index');
-Route::get('admin/cate_list', 'Admin\CateController@cate_list');
-
-//商品分类
+Route::get('admin/goods',function (){
+    return view('admin/cates');
+});
 Route::get('admin/cates',function (){
     return view('admin/cates');
 });
 Route::get('admin/buttons',function (){
     return view('admin/buttons');
+});
+Route::get('admin/orders',function (){
+    return view('admin/orders');
+});
+Route::get('admin/recycle',function (){
+    return view('admin/recycle');
+});
+Route::get('admin/userlist',function (){
+    return view('admin/userlist');
+});
+Route::get('admin/useradd',function (){
+    return view('admin/useradd');
+});
+Route::get('admin/userrank',function (){
+    return view('admin/userrank');
+});
+Route::get('admin/usermsg',function (){
+    return view('admin/usermsg');
+});
+Route::get('admin/basicset',function (){
+    return view('admin/basicset');
+});
+Route::get('admin/adminlist',function (){
+    return view('admin/adminlist');
 });

@@ -46,74 +46,39 @@
     <div id="content">
         <div class="wrap">
             <div class="page-title">
-                <span class="modular fl"><i></i><em>产品分类</em></span>
-                <span class="modular fr"><a href="add_category.html" class="pt-link-btn">+添加新分类</a></span>
+                <span class="modular fl"><i class="user"></i><em>会员留言</em></span>
             </div>
-
-            <table class="list-style">
+            <table class="list-style Interlaced">
                 <tr>
-                    <th>分类名称</th>
-                    <th>产品数量</th>
-                    <th>单位</th>
-                    <th>是否显示</th>
-                    <th>排序</th>
+                    <th>会员账号</th>
+                    <th>留言时间</th>
+                    <th>处理状态</th>
+                    <th>留言内容</th>
+                    <th>管理员回复</th>
                     <th>操作</th>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox"/>
-                        <span>西餐</span>
+                    <td class="center">DeathGhost</td>
+                    <td class="center">2015-04-18 10:39</td>
+                    <td class="center">未处理</td>
+                    <td width="300">
+                        <div style="width:400px;height:50px;overflow:scroll;overflow-x:hidden;">
+                            这里是留言内容
+                        </div>
                     </td>
-                    <td class="center">1</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
+                    <td width="300">
+                        <div style="width:400px;height:50px;overflow:scroll;overflow-x:hidden;">
+                            这里是留言内容
+                        </div>
                     </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox"/>
-                        <span>西餐</span>
+                    <td class="center">
+                        <a href="reply_message.html" class="inline-block" title="回复"><img src="images/icon_title.gif"/></a>
+                        <a class="inline-block" title="移除"><img src="images/icon_drop.gif"/></a>
                     </td>
-                    <td class="center">1</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
-                    </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
                 </tr>
             </table>
-
             <!-- BatchOperation -->
             <div style="overflow:hidden;">
-                <!-- Operation -->
-                <div class="BatchOperation fl">
-                    <input type="checkbox" id="del"/>
-                    <label for="del" class="btnStyle middle">全选</label>
-                    <input type="button" value="批量删除" class="btnStyle"/>
-                </div>
                 <!-- turn page -->
                 <div class="turnPage center fr">
                     <a>第一页</a>

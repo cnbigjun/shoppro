@@ -46,72 +46,96 @@
     <div id="content">
         <div class="wrap">
             <div class="page-title">
-                <span class="modular fl"><i></i><em>产品分类</em></span>
-                <span class="modular fr"><a href="add_category.html" class="pt-link-btn">+添加新分类</a></span>
+                <span class="modular fl"><i class="user"></i><em>会员列表</em></span>
+                <span class="modular fr"><a href="add_user.html" class="pt-link-btn">+添加新会员</a></span>
             </div>
-
-            <table class="list-style">
+            <div class="operate">
+                <form>
+                    <select class="inline-select">
+                        <option>选择会员等级</option>
+                        <option>白金会员</option>
+                        <option>黄金会员</option>
+                    </select>
+                    <input type="text" class="textBox length-long" placeholder="输入会员昵称、姓名、手机号码..."/>
+                    <input type="button" value="查询" class="tdBtn"/>
+                </form>
+            </div>
+            <table class="list-style Interlaced">
                 <tr>
-                    <th>分类名称</th>
-                    <th>产品数量</th>
-                    <th>单位</th>
-                    <th>是否显示</th>
-                    <th>排序</th>
+                    <th>编号</th>
+                    <th>会员昵称</th>
+                    <th>邮件地址</th>
+                    <th>手机号码</th>
+                    <th>是否验证</th>
+                    <th>可用资金</th>
+                    <th>冻结资金</th>
+                    <th>注册日期</th>
                     <th>操作</th>
                 </tr>
                 <tr>
                     <td>
                         <input type="checkbox"/>
-                        <span>西餐</span>
+                        <span class="middle">0</span>
                     </td>
-                    <td class="center">1</td>
-                    <td class="center">盘</td>
+                    <td class="center">DeathGhost</td>
+                    <td class="center">DeathGhost@sina.cn</td>
+                    <td class="center">18309275673</td>
                     <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
+                    <td class="center">
+     <span>
+      <i>￥</i>
+      <b>5000000.00</b>
+     </span>
                     </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
+                    <td class="center">
+     <span>
+      <i>￥</i>
+      <b>300.00</b>
+     </span>
+                    </td>
+                    <td class="center">2015-04-17</td>
+                    <td class="center">
+                        <a href="edit_user.html" class="inline-block" title="编辑"><img src="images/icon_edit.gif"/></a>
+                        <a href="account.html" class="inline-block" title="资金管理"><img src="images/icon_account.gif"/></a>
+                        <a class="inline-block" title="删除"><img src="images/icon_drop.gif"/></a>
+                    </td>
                 </tr>
 
                 <tr>
                     <td>
                         <input type="checkbox"/>
-                        <span>西餐</span>
+                        <span class="middle">0</span>
                     </td>
-                    <td class="center">1</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
-                    </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
+                    <td class="center">DeathGhost</td>
+                    <td class="center">DeathGhost@sina.cn</td>
+                    <td class="center">18309275673</td>
                     <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
+                    <td class="center">
+     <span>
+      <i>￥</i>
+      <b>5000000.00</b>
+     </span>
+                    </td>
+                    <td class="center">
+     <span>
+      <i>￥</i>
+      <b>300.00</b>
+     </span>
+                    </td>
+                    <td class="center">2015-04-17</td>
+                    <td class="center">
+                        <a href="edit_user.html" class="inline-block" title="编辑"><img src="images/icon_edit.gif"/></a>
+                        <a href="account.html" class="inline-block" title="资金管理"><img src="images/icon_account.gif"/></a>
+                        <a class="inline-block" title="删除"><img src="images/icon_drop.gif"/></a>
+                    </td>
                 </tr>
             </table>
-
             <!-- BatchOperation -->
             <div style="overflow:hidden;">
                 <!-- Operation -->
                 <div class="BatchOperation fl">
                     <input type="checkbox" id="del"/>
-                    <label for="del" class="btnStyle middle">全选</label>
+                    <label for="del" class="btnStyle">全选</label>
                     <input type="button" value="批量删除" class="btnStyle"/>
                 </div>
                 <!-- turn page -->
