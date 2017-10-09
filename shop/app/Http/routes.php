@@ -33,6 +33,10 @@ Route::get('auth/logout','Admin\UsersController@getlogout');
 Route::get('admin/cate', 'Admin\CateController@index');
 Route::get('admin/cate_list', 'Admin\CateController@cate_list');
 
+//商品分类
+Route::get('admin/cates',function (){
+    return view('admin/cates');
+});
 Route::get('admin/buttons',function (){
     return view('admin/buttons');
 });

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/fullcalendar.css" />
     <link rel="stylesheet" href="css/unicorn.main.css" />
     <link rel="stylesheet" href="css/unicorn.grey.css" class="skin-color" />
+
 @stop
 
 @section('header')
