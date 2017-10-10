@@ -31,11 +31,9 @@ Route::get('auth/logout','Admin\UsersController@getlogout');
 
 // 栏目管理
 Route::get('admin/goods',function (){
-    return view('admin/cates');
+    return view('admin/goods');
 });
-Route::get('admin/cates',function (){
-    return view('admin/cates');
-});
+Route::get('admin/cates','Admin\CategoryController@cates');
 Route::get('admin/buttons',function (){
     return view('admin/buttons');
 });
@@ -63,3 +61,6 @@ Route::get('admin/basicset',function (){
 Route::get('admin/adminlist',function (){
     return view('admin/adminlist');
 });
+//后台操作数据库
+Route::get('admin/addcate','Admin\CategoryController@add');
+Route::post('admin/addcate','Admin\CategoryController@addPost');

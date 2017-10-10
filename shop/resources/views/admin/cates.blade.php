@@ -47,7 +47,7 @@
         <div class="wrap">
             <div class="page-title">
                 <span class="modular fl"><i></i><em>产品分类</em></span>
-                <span class="modular fr"><a href="add_category.html" class="pt-link-btn">+添加新分类</a></span>
+                <span class="modular fr"><a href="{{url('admin/addcate')}}" class="pt-link-btn">+添加新分类</a></span>
             </div>
 
             <table class="list-style">
@@ -59,10 +59,15 @@
                     <th>排序</th>
                     <th>操作</th>
                 </tr>
+                @foreach($cates as $cate)
                 <tr>
+                    @if($cate->parent_id==0)
                     <td>
+                    @else
+                    <td style="text-indent:2em;">
+                    @endif
                         <input type="checkbox"/>
-                        <span>西餐</span>
+                        <span>{{$cate->cat_name}}</span>
                     </td>
                     <td class="center">1</td>
                     <td class="center">盘</td>
@@ -70,40 +75,7 @@
                     <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
                     <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
                 </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
-                    </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="checkbox"/>
-                        <span>西餐</span>
-                    </td>
-                    <td class="center">1</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
-                <tr>
-                    <td style="text-indent:2em;">
-                        <input type="checkbox"/>
-                        <span>面包</span>
-                    </td>
-                    <td class="center">3</td>
-                    <td class="center">盘</td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
-                </tr>
+                @endforeach
             </table>
 
             <!-- BatchOperation -->
