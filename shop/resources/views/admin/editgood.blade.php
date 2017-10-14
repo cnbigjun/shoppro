@@ -1,12 +1,12 @@
 @extends('admin.Base._base')
 
 @section('head_css')
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="css/fullcalendar.css" />
-    <link rel="stylesheet" href="css/unicorn.main.css" />
-    <link rel="stylesheet" href="css/unicorn.grey.css" class="skin-color" />
-    <link href="style/adminStyle.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="../css/fullcalendar.css" />
+    <link rel="stylesheet" href="../css/unicorn.main.css" />
+    <link rel="stylesheet" href="../css/unicorn.grey.css" class="skin-color" />
+    <link href="../style/adminStyle.css" rel="stylesheet" type="text/css"/>
 
 @stop
 
@@ -55,7 +55,7 @@
                 <table class="list-style">
                     <tr>
                         <td style="text-align:right;width:15%;">产品名称：</td>
-                        <td><input type="text" class="textBox length-long" name="goods_name">{{$good->goods_name}}</td>
+                        <td><input type="text" class="textBox length-long" name="goods_name" value="{{$good->goods_name}}"></td>
                     </tr>
                     <tr>
                         <td style="text-align:right;">产品分类：</td>
@@ -72,31 +72,31 @@
                     <tr>
                         <td style="text-align:right;">市场价：</td>
                         <td>
-                            <input type="text" class="textBox length-short" name="market_price"/>
-                            <span>{{$good->market_price}}元</span>
+                            <input type="text" class="textBox length-short" name="market_price" value="{{$good->market_price}}"/>
+                            <span>元</span>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:right;" >会员价：</td>
                         <td>
-                            <input type="text" class="textBox length-short" name="plus_price"/>
-                            <span>{{$good->plus_price}}元</span>
+                            <input type="text" class="textBox length-short" name="plus_price" value="{{$good->plus_price}}"/>
+                            <span>元</span>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:right;">库存：</td>
                         <td>
-                            <input type="text" class="textBox length-short" name="goods_number"/>
-                            <span>{{$good->goods_number}}台</span>
+                            <input type="text" class="textBox length-short" name="goods_number" value="{{$good->goods_number}}" >
+                            <span>台</span>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:right;" >产品关键词：</td>
-                        <td><input type="text" class="textBox length-long" name="goods_keywords"/>{{$good->goods_keywords}}</td>
+                        <td><input type="text" class="textBox length-long" name="goods_keywords" value="{{$good->goods_keywords}}"></td>
                     </tr>
                     <tr>
                         <td style="text-align:right;">产品描述：</td>
-                        <td><input type="text" class="textBox length-long" name="goods_brief"/>{{$good->goods_brief}}</td>
+                        <td><input type="text" class="textBox length-long" name="goods_brief" value="{{$good->goods_brief}}"></td>
                     </tr>
                     <tr>
                         <td style="text-align:right;">推荐至：</td>
@@ -157,16 +157,16 @@
     @endif
 @stop
 @section('js')
-    <script src="jsmodel/jquery.js"></script>
-    <script src="jsmodel/public.js"></script>
-    <script src="js/excanvas.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.ui.custom.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.flot.min.js"></script>
-    <script src="js/jquery.flot.resize.min.js"></script>
-    <script src="js/jquery.peity.min.js"></script>
-    <script src="js/fullcalendar.min.js"></script>
-    <script src="js/unicorn.js"></script>
-    <script src="js/unicorn.dashboard.js"></script>
+    <script src="../jsmodel/jquery.js"></script>
+    <script src="../jsmodel/public.js"></script>
+    <script src="../js/excanvas.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.ui.custom.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.flot.min.js"></script>
+    <script src="../js/jquery.flot.resize.min.js"></script>
+    <script src="../js/jquery.peity.min.js"></script>
+    <script src="../js/fullcalendar.min.js"></script>
+    <script src="../js/unicorn.js"></script>
+    <script src="../js/unicorn.dashboard.js"></script>
 @stop
