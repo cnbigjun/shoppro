@@ -80,9 +80,9 @@
      <i>{{$good->goods_id}}</i>
      </span>
                     </td>
-                    <td class="center pic-area"><img src="{{$good->thumbimg}}" class="thumbnail"/></td>
+                    <td class="center pic-area"><img src="../upload/{{$good->thumb_img}}" class="thumbnail"/></td>
                     <td class="td-name">
-                        <span class="ellipsis td-name block">这是产品或服务名称(宽度350px,样式自动截取，以省略号表示哦，程序可以处理“截取字符串”)</span>
+                        <span class="ellipsis td-name block">{{$good->goods_name}}</span>
                     </td>
                     <td class="center">
      <span>
@@ -98,58 +98,32 @@
                     </td>
                     <td class="center">
      <span>
-      <em>589</em>
+      <em>{{$good->goods_number}}</em>
       <i>件</i>
      </span>
                     </td>
+                    @if($good->is_best==1)
                     <td class="center"><img src="images/yes.gif"/></td>
+                    @else
                     <td class="center"><img src="images/no.gif"/></td>
+                    @endif
+                    @if($good->is_new==1)
                     <td class="center"><img src="images/yes.gif"/></td>
+                    @else
+                    <td class="center"><img src="images/no.gif"/></td>
+                    @endif
+                    @if($good->is_hot==1)
+                    <td class="center"><img src="images/yes.gif"/></td>
+                    @else
+                    <td class="center"><img src="images/no.gif"/></td>
+                    @endif
                     <td class="center">
                         <a href="http://www.baidu.com/跳转至前台页面哦" title="查看" target="_blank"><img src="images/icon_view.gif"/></a>
-                        <a href="edit_product.html" title="编辑"><img src="images/icon_edit.gif"/></a>
-                        <a title="删除"><img src="images/icon_drop.gif"/></a>
+                        <a href="{{url('admin/editgood',[$good->goods_id])}}" title="编辑"><img src="images/icon_edit.gif"/></a>
+                        <a title="删除" href="{{url('admin/delgood',[$good->goods_id])}}"><img src="images/icon_drop.gif"/></a>
                     </td>
                 </tr>
                 @endforeach
-                <tr>
-                    <td>
-     <span>
-     <input type="checkbox" class="middle children-checkbox"/>
-     <i>0</i>
-     </span>
-                    </td>
-                    <td class="center pic-area"><img src="#" class="thumbnail"/></td>
-                    <td class="td-name">
-                        <span class="ellipsis td-name block">这是产品或服务名称(宽度350px,样式自动截取，以省略号表示哦，程序可以处理“截取字符串”)</span>
-                    </td>
-                    <td class="center">
-     <span>
-      <i>￥</i>
-      <em>0.00</em>
-     </span>
-                    </td>
-                    <td class="center">
-     <span>
-      <i>￥</i>
-      <em>0.00</em>
-     </span>
-                    </td>
-                    <td class="center">
-     <span>
-      <em>589</em>
-      <i>件</i>
-     </span>
-                    </td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center">
-                        <a title="查看" target="_blank"><img src="images/icon_view.gif"/></a>
-                        <a title="编辑"><img src="images/icon_edit.gif"/></a>
-                        <a title="删除"><img src="images/icon_drop.gif"/></a>
-                    </td>
-                </tr>
 
             </table>
             <!-- BatchOperation -->
@@ -169,6 +143,10 @@
             </div>
         </div>
     </div>
+    @if(Session::has('message'))
+        <div class="alert alert-info"> {{Session::get('message')}}
+        </div>
+    @endif
 @stop
 @section('js')
     <script src="jsmodel/jquery.js"></script>

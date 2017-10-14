@@ -30,9 +30,6 @@ Route::post('admin/login','Admin\AuthController@postlogin');
 Route::get('auth/logout','Admin\UsersController@getlogout');
 
 // 栏目管理
-Route::get('admin/goods',function (){
-    return view('admin/goods');
-});
 
 Route::get('admin/buttons',function (){
     return view('admin/buttons');
@@ -71,10 +68,10 @@ Route::post('admin/editcate/{cat_id}','Admin\CategoryController@editPost');
 //商品后台操作数据库
 Route::get('admin/addgood','Admin\GoodsController@add');
 Route::post('admin/addgood','Admin\GoodsController@addPost');
-Route::get('admin/goodlist','Admin\GoodsController@goods');
-Route::get('admin/delgood/{good_id}','Admin\GoodsController@del');
-Route::get('admin/editgood/{good_id}','Admin\GoodsController@edit');
-Route::post('admin/editgood/{good_id}','Admin\GoodsController@editPost');
+Route::get('admin/goods','Admin\GoodsController@goods');
+Route::get('admin/delgood/{goods_id}','Admin\GoodsController@del');
+Route::get('admin/editgood/{goods_id}','Admin\GoodsController@edit');
+Route::post('admin/editgood/{goods_id}','Admin\GoodsController@editPost');
 
 
 //test
