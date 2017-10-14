@@ -74,6 +74,7 @@ Route::get('admin/editgood/{goods_id}','Admin\GoodsController@edit');
 Route::post('admin/editgood/{goods_id}','Admin\GoodsController@editPost');
 
 
+
 /*
  * 前端路由
  */
@@ -87,3 +88,13 @@ Route::get('catlist','Home\CatController@catlist');
 // 商品内容页
 Route::get('goods','Home\GoodsController@goods');
 //test
+
+
+
+
+
+
+//以下为前台页面
+Route::get('member','Home\MemController@index');
+Route::get('order','Home\MemController@order');
+Route::get('cart','Home\CartgitController@index');
