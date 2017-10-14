@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home/home');
-});
+// Route::get('/', function () {
+//     return view('home/home');
+// });
 
 Route::get('admin/index', function () {
     return view('admin/Index/index');
@@ -74,4 +74,16 @@ Route::get('admin/editgood/{goods_id}','Admin\GoodsController@edit');
 Route::post('admin/editgood/{goods_id}','Admin\GoodsController@editPost');
 
 
+/*
+ * 前端路由
+ */
+
+// 首页路由
+Route::get('/','Home\IndexController@index');
+
+// 商品栏目
+Route::get('catlist','Home\CatController@catlist');
+
+// 商品内容页
+Route::get('goods','Home\GoodsController@goods');
 //test

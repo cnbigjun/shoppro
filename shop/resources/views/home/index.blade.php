@@ -76,10 +76,10 @@
                     </div>
                 </li>-->
 				<li class="mz_login">
-                    <a class="topbar-link site-login" target="_self" href="/home/public/login">登录</a>
+                    <a class="topbar-link site-login" target="_self" href="{{url('login')}}">登录</a>
                 </li>
                 <li class="mz_login">
-                    <a class="topbar-link" target="_self" href="/home/public/register">注册</a>
+                    <a class="topbar-link" target="_self" href="{{url('register')}}">注册</a>
                 </li>
 				
                 <li class="topbar-order-msg">
@@ -654,7 +654,7 @@
                         <a href="/home/product/shop/46"><img src="__PUBLIC__/Home/images/89557ea0-19eb-11e7-b1f7-49224369332f.jpg" alt=""></a>
                     </li>
                     <li class="brand-log">
-                        <a href="/home/product/shop/1"><img src="__PUBLIC__/Home/images/c00b6480-9059-11e6-beb5-59e40724fc32.jpg" alt=""></a>
+                        <a href="{{url('goods')}}"><img src="__PUBLIC__/Home/images/c00b6480-9059-11e6-beb5-59e40724fc32.jpg" alt=""></a>
                     </li>
                     <li class="brand-log">
                         <a href="/home/product/shop/50"><img src="__PUBLIC__/Home/images/aae44eb0-1e9c-11e7-b91b-953390e2cc9a.jpg" alt=""></a>
@@ -704,7 +704,7 @@
                         </div>
                     
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/60">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de943c40-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -721,7 +721,7 @@
                         
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/46" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             koahub商城
                                         </a>
                                     </div>
@@ -731,7 +731,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/72">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de9303c0-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -752,7 +752,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/46" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             koahub商城
                                         </a>
                                     </div>
@@ -762,7 +762,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/61">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de93a000-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -783,7 +783,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/46" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             koahub商城
                                         </a>
                                     </div>
@@ -793,7 +793,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/54">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de926780-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -831,11 +831,11 @@
                             <div class="area-name-left" style="height: 60px">wemall商城
                                 <span style="color: #666;font-size: 16px;">- 高性能移动商城系统，微信商城系统，三级分销系统</span>
                             </div>
-                            <div class="area-name-right"><a href="/home/product/shop/1">更多<i class="iconfont">&#xe624;</i></a></div>
+                            <div class="area-name-right"><a href="{{url('goods')}}">更多<i class="iconfont">&#xe624;</i></a></div>
                         </div>
                     
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/79">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd27940-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -852,7 +852,7 @@
                         
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -862,7 +862,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/2">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd3d8d0-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -883,7 +883,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -893,7 +893,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/80">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd5fbb0-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -910,7 +910,7 @@
                         
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -920,7 +920,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/3">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/26aea730-1393-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -941,7 +941,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -951,7 +951,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/81">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/eb478b30-1db5-11e7-b91b-953390e2cc9a.jpg"
@@ -972,7 +972,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -982,7 +982,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/82">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd47510-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -1003,7 +1003,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -1013,7 +1013,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/5">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd31580-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -1034,7 +1034,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -1044,7 +1044,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/4">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/e76ae340-145f-11e7-a44c-8b67d4d6c549.jpg"
@@ -1065,7 +1065,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -1075,7 +1075,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/1">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de91cb40-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -1096,7 +1096,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -1106,7 +1106,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/50">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbcbc280-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -1127,7 +1127,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -1137,7 +1137,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/6">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/b7026570-1392-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -1158,7 +1158,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
@@ -1168,7 +1168,7 @@
                             </a>
                         </div>
                         <div class="rmd-box rmd-box-product">
-                            <a href="/home/product/16">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/26b006c0-1393-11e7-ab1b-f7c3fd5f14b2.jpg"
@@ -1189,7 +1189,7 @@
                                         </del>
                                     </div>
                                     <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/1" style="color: #999;">
+                                        <a href="{{url('goods')}}" style="color: #999;">
                                             wemall商城
                                         </a>
                                     </div>
