@@ -73,7 +73,7 @@
                     <td class="center">盘</td>
                     <td class="center"><img src="images/yes.gif"/></td>
                     <td class="center"><input type="text" value="0" style="width:50px;text-align:center;"/></td>
-                    <td class="center"><a class="block" title="移除"><img src="images/icon_trash.gif"/></a></td>
+                    <td class="center"><a href="{{url('admin/editcate',[$cate->cat_id])}}" class="block inlinetd" title="编辑"><img src="images/icon_edit.gif"/></a><a href="{{url('admin/delcate',[$cate->cat_id])}}" class="block inlinetd" title="移除"><img src="images/icon_trash.gif"/></a></td>
                 </tr>
                 @endforeach
             </table>
@@ -95,6 +95,10 @@
             </div>
         </div>
     </div>
+    @if(Session::has('message'))
+        <div class="alert alert-info"> {{Session::get('message')}}
+        </div>
+    @endif
 @stop
 @section('js')
     <script src="jsmodel/jquery.js"></script>

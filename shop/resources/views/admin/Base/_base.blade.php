@@ -9,7 +9,6 @@
     <meta name="renderer" content="webkit">{{-- 360浏览器使用webkit内核渲染页面 --}}
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />{{-- IE(内核)浏览器优先使用高版本内核 --}}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-
     @section('meta')
     @show{{-- 添加一些额外的META申明 --}}
 

@@ -20,7 +20,7 @@ input,button,select,img{vertical-align:middle;}
 .hide{display:none;}
 .labelBtnAdd{display:block;float:left;width:60px;height:60px;text-align:center;line-height:60px;font-size:24px;cursor:pointer;font-weight:bold;color:#fff;background:#96aecd;}
 .labelBtnAdd:hover{background:#a0b7d4;}
-.labelBtn2{background:#96aecd;padding:5px 15px;color:#fff;}
+.labelBtn2{margin-top:20px;padding:5px;}
 .labelBtn2:hover{background:#a0b7d4;}
 .trbgcolor{background:#f1f1f1;}
 .loginform{position:absolute;top:0;overflow:hidden;width:25%;margin:10% 37.5% 0 37.5%;overflow:hidden;background:rgba(204,204,204,.5);padding:2em;border-radius:5px;box-shadow:0 0 10px #999;}
@@ -148,3 +148,4 @@ input,button,select,img{vertical-align:middle;}
 .ds_dialog_close{ height:24px; width:24px; position:absolute; right:10px; top:6px;}
 .ds_dialog_close a{ display:block; color:#FFF; font:26px/24px Arial,Helvetica; height:24px; overflow:hidden; text-align:center; text-decoration:none; text-shadow:0 -1px 0 #395ba1;}
 .ds_dialog_close a:hover{ color:#fff; text-decoration:none;}
+.inlinetd{display:inline;}

@@ -47,7 +47,7 @@
         <div class="wrap">
             <div class="page-title">
                 <span class="modular fl"><i></i><em>产品列表</em></span>
-                <span class="modular fr"><a href="edit_product.html" class="pt-link-btn">+添加商品</a></span>
+                <span class="modular fr"><a href="{{url('admin/addgood')}}" class="pt-link-btn">+添加商品</a></span>
             </div>
             <div class="operate">
                 <form>
@@ -72,27 +72,28 @@
                     <th>热销</th>
                     <th>操作</th>
                 </tr>
+                @foreach($goods as $good)
                 <tr>
                     <td>
      <span>
      <input type="checkbox" class="middle children-checkbox"/>
-     <i>0</i>
+     <i>{{$good->goods_id}}</i>
      </span>
                     </td>
-                    <td class="center pic-area"><img src="#" class="thumbnail"/></td>
+                    <td class="center pic-area"><img src="{{$good->thumbimg}}" class="thumbnail"/></td>
                     <td class="td-name">
                         <span class="ellipsis td-name block">这是产品或服务名称(宽度350px,样式自动截取，以省略号表示哦，程序可以处理“截取字符串”)</span>
                     </td>
                     <td class="center">
      <span>
       <i>￥</i>
-      <em>0.00</em>
+      <em>{{$good->market_price}}</em>
      </span>
                     </td>
                     <td class="center">
      <span>
       <i>￥</i>
-      <em>0.00</em>
+      <em>{{$good->plus_price}}</em>
      </span>
                     </td>
                     <td class="center">
@@ -110,7 +111,7 @@
                         <a title="删除"><img src="images/icon_drop.gif"/></a>
                     </td>
                 </tr>
-
+                @endforeach
                 <tr>
                     <td>
      <span>
@@ -150,44 +151,6 @@
                     </td>
                 </tr>
 
-                <tr>
-                    <td>
-     <span>
-     <input type="checkbox" class="middle children-checkbox"/>
-     <i>0</i>
-     </span>
-                    </td>
-                    <td class="center pic-area"><img src="#" class="thumbnail"/></td>
-                    <td class="td-name">
-                        <span class="ellipsis td-name block">这是产品或服务名称(宽度350px,样式自动截取，以省略号表示哦，程序可以处理“截取字符串”)</span>
-                    </td>
-                    <td class="center">
-     <span>
-      <i>￥</i>
-      <em>0.00</em>
-     </span>
-                    </td>
-                    <td class="center">
-     <span>
-      <i>￥</i>
-      <em>0.00</em>
-     </span>
-                    </td>
-                    <td class="center">
-     <span>
-      <em>589</em>
-      <i>件</i>
-     </span>
-                    </td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center"><img src="images/no.gif"/></td>
-                    <td class="center"><img src="images/yes.gif"/></td>
-                    <td class="center">
-                        <a title="查看" target="_blank"><img src="images/icon_view.gif"/></a>
-                        <a title="编辑"><img src="images/icon_edit.gif"/></a>
-                        <a title="删除"><img src="images/icon_drop.gif"/></a>
-                    </td>
-                </tr>
             </table>
             <!-- BatchOperation -->
             <div style="overflow:hidden;">

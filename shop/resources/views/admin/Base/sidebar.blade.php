@@ -16,6 +16,7 @@
                     @foreach($cate_list['son'] as $son)
                         @if($son->parent_id == $list->cate_id)
                         <li><a href="{{$son->url}}">{{$son->cate_name}}</a></li>
+
                         @endif
                     @endforeach
                     </ul>
