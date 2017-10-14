@@ -55,12 +55,12 @@
                 <table class="list-style">
                     <tr>
                         <td style="text-align:right;width:15%;">产品名称：</td>
-                        <td><input type="text" class="textBox length-long" name="goods_name"></td>
+                        <td><input type="text" class="textBox length-long" name="goods_name">{{$good->goods_name}}</td>
                     </tr>
                     <tr>
                         <td style="text-align:right;">产品分类：</td>
                         <td>
-                            <select class="textBox" name="cat_id">
+                            <select class="textBox" name="cat_id" value="{{$good->cat_id}}">
                                 <option value="0">顶层分类</option>
                                 <option value="1">娱乐陪护</option>
                                 <option value="2">智能出行</option>
@@ -73,30 +73,30 @@
                         <td style="text-align:right;">市场价：</td>
                         <td>
                             <input type="text" class="textBox length-short" name="market_price"/>
-                            <span>元</span>
+                            <span>{{$good->market_price}}元</span>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:right;" >会员价：</td>
                         <td>
                             <input type="text" class="textBox length-short" name="plus_price"/>
-                            <span>元</span>
+                            <span>{{$good->plus_price}}元</span>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:right;">库存：</td>
                         <td>
                             <input type="text" class="textBox length-short" name="goods_number"/>
-                            <span>台</span>
+                            <span>{{$good->goods_number}}台</span>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align:right;" >产品关键词：</td>
-                        <td><input type="text" class="textBox length-long" name="goods_keywords"/></td>
+                        <td><input type="text" class="textBox length-long" name="goods_keywords"/>{{$good->goods_keywords}}</td>
                     </tr>
                     <tr>
                         <td style="text-align:right;">产品描述：</td>
-                        <td><input type="text" class="textBox length-long" name="goods_brief"/></td>
+                        <td><input type="text" class="textBox length-long" name="goods_brief"/>{{$good->goods_brief}}</td>
                     </tr>
                     <tr>
                         <td style="text-align:right;">推荐至：</td>
@@ -141,7 +141,7 @@
 
                     <tr>
                         <td style="text-align:right;">产品详情：</td>
-                        <td><textarea class="textarea tdmargin" name="goods_desc"></textarea></td>
+                        <td><textarea class="textarea tdmargin" name="goods_desc">{{$good->goods_desc}}</textarea></td>
                     </tr>
                     <tr>
                         <td style="text-align:right;"></td>
@@ -149,14 +149,6 @@
                     </tr>
                 </table>
             </form>
-
-
-
-
-
-
-
-
         </div>
     </div>
     @if(Session::has('message'))
