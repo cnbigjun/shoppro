@@ -499,12 +499,14 @@
             
                     <ul class="home-category-nav">
             
+                        @foreach($categorys as $c)
                         <li class="home-category-nav-item">
                             <a class="category-nav-link" href="/home/search/index?menu=6">
-                                <span>免费专区</span> 
+                                <span>{{$c->cat_name}}</span> <i class="iconfont" style="color:#dd4b39">&#xe622;</i>
                             </a>
                         </li>
-                        <li class="home-category-nav-item">
+                        @endforeach
+<!--                         <li class="home-category-nav-item">
                             <a class="category-nav-link" href="/home/search/index?menu=1">
                                 <span>商城系统</span> <i class="iconfont" style="color:#dd4b39">&#xe622;</i>
                             </a>
@@ -528,7 +530,7 @@
                             <a class="category-nav-link" href="/home/search/index?menu=8">
                                 <span>增值服务</span> 
                             </a>
-                        </li>
+                        </li> -->
             
                     </ul>
             
@@ -697,26 +699,28 @@
                     
                     <div class="home-rmd-cotent">
                         <div class="area-name">
-                            <div class="area-name-left" style="height: 60px">koahub商城
-                                <span style="color: #666;font-size: 16px;">- Node.js 下一代商城系统</span>
+                            <div class="area-name-left" style="height: 60px">畅销专区
+                                <span style="color: #666;font-size: 16px;">- 更多人的选择你值得拥有!</span>
                             </div>
                             <div class="area-name-right"><a href="/home/product/shop/46">更多<i class="iconfont">&#xe624;</i></a></div>
                         </div>
-                    
+                        
+                        @foreach($goods as $g)
+                        @if($g->is_hot == 1)
                         <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
+                            <a href="{{url('goods',$g->goods_id)}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de943c40-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
                                         style="display: inline;width: 243px;height: 243px">
                                     <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">单用户商城</h4>
+                                        <h4 class="rmd-product-title">{{$g->goods_name}}</h4>
                                         <h6 class="rmd-product-subtitle"></h6>
                                         <!-- TODO 替换为内容-->
                         
                                         <p class="rmd-product-price">
                                             ¥
-                                            <span>16000</span>
+                                            <span>{{$g->plus_price}}</span>
                                         </p>
                         
                                     </div>
@@ -730,110 +734,21 @@
                         
                             </a>
                         </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de9303c0-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">多用户商城</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>16000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">32000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            koahub商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de93a000-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">单用户商城（App）</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>16000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">65000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            koahub商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de926780-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">全栈移动商城（微信端＋App）</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>16000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">68000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="/home/product/shop/46" style="color: #999;">
-                                            koahub商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
+                        @endif
+                        @endforeach
+
                     </div>
                     
                     
                     <div class="home-rmd-cotent">
                         <div class="area-name">
-                            <div class="area-name-left" style="height: 60px">wemall商城
-                                <span style="color: #666;font-size: 16px;">- 高性能移动商城系统，微信商城系统，三级分销系统</span>
+                            <div class="area-name-left" style="height: 60px">精选专区
+                                <span style="color: #666;font-size: 16px;">- 高性能商城，简洁大气的企业模板，更精转化的增值服务</span>
                             </div>
                             <div class="area-name-right"><a href="{{url('goods')}}">更多<i class="iconfont">&#xe624;</i></a></div>
                         </div>
                     
+                        @foreach($goods as $g)
                         <div class="rmd-box rmd-box-product">
                             <a href="{{url('goods')}}">
                         
@@ -841,13 +756,13 @@
                                     <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd27940-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
                                         style="display: inline;width: 243px;height: 243px">
                                     <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">【 普通版小程序 】</h4>
+                                        <h4 class="rmd-product-title">{{$g->goods_name}}</h4>
                                         <h6 class="rmd-product-subtitle"></h6>
                                         <!-- TODO 替换为内容-->
                         
                                         <p class="rmd-product-price">
                                             ¥
-                                            <span>2000</span>
+                                            <span>{{$g->plus_price}}</span>
                                         </p>
                         
                                     </div>
@@ -861,343 +776,11 @@
                         
                             </a>
                         </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd3d8d0-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">普通版微商城（wemall7）</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>4000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">4000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd5fbb0-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">【 水果版小程序 】</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>4000</span>
-                                        </p>
-                        
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/26aea730-1393-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">水果版微商城（wemall7）</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>6000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">6000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/eb478b30-1db5-11e7-b91b-953390e2cc9a.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">o2o版微商城 (wemall7…</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>5000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">5000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd47510-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">商城管理后台 (wemall7)</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>3000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">3000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd31580-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">超市版微商城（wemall7）</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>5000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">5000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/e76ae340-145f-11e7-a44c-8b67d4d6c549.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">外卖版微商城（wemall7）</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>5000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">5000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/de91cb40-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">分销版微商城</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>4500</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">4500</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbcbc280-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">多用户商城尊享版</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>12800</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">12800</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/b7026570-1392-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">多店铺商城</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>5000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">5000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
-                        <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods')}}">
-                        
-                                <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/26b006c0-1393-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                        style="display: inline;width: 243px;height: 243px">
-                                    <div class="rmd-product-desc" style="margin-top: 20px;">
-                                        <h4 class="rmd-product-title">夺宝商城</h4>
-                                        <h6 class="rmd-product-subtitle"></h6>
-                                        <!-- TODO 替换为内容-->
-                        
-                                        <p class="rmd-product-price">
-                                            ¥
-                                            <span>5000</span>
-                                        </p>
-                        
-                                        <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                            ¥
-                                            <span style="font-size: 13px;">5000</span>
-                                        </del>
-                                    </div>
-                                    <div style="text-align: left;font: 12px/12px SimSun;margin: 10px 4px 0 10px;float: left">
-                                        <a href="{{url('goods')}}" style="color: #999;">
-                                            wemall商城
-                                        </a>
-                                    </div>
-                        
-                                </div>
-                        
-                            </a>
-                        </div>
+                        @endforeach
+
+
+
+
                     </div>
                     
                 </div>
@@ -1489,177 +1072,7 @@
 </script>
 </div>
 
-<style type="text/css">
-    .site-footer .service-item > i {
-        font-size: 48px;
-    }
-    .site-footer .site-footer-end img {
-        height: 36px;
-    }
-</style>
-<div class="site-footer">
-    <div class="mzcontainer">
-        <div class="site-footer-service">
-            <ul class="clearfix">
-                <li class="service-item">
-                    <i class="iconfont">&#xe606;</i>
-                    <p class="service-desc">
-                        <span class="service-desc-bold">质量</span>
-                        <span class="service-desc-normal">保证</span>
-                    </p>
-                </li>
-                <li class="service-split-line">
-                    <span></span>
-                </li>
-                <li class="service-item">
-                    <i class="iconfont">&#xe607;</i>
-                    <p class="service-desc">
-                        <span class="service-desc-bold">售后</span>
-                        <span class="service-desc-normal">保障</span>
-                    </p>
-                </li>
-                <li class="service-split-line">
-                    <span></span>
-                </li>
-                <li class="service-item">
-                    <i class="iconfont">&#xe608;</i>
-                    <p class="service-desc">
-                        <span class="service-desc-bold">自助</span>
-                        <span class="service-desc-normal">服务</span>
-                    </p>
-                </li>
-                <li class="service-split-line">
-                    <span></span>
-                </li>
-                <li class="service-item">
-                    <i class="iconfont">&#xe60a;</i>
-                    <p class="service-desc">
-                        <span class="service-desc-bold">技术</span>
-                        <span class="service-desc-normal">支持</span>
-                    </p>
-                </li>
-                <li class="service-split-line">
-                    <span></span>
-                </li>
-                <li class="service-item">
-                    <i class="iconfont">&#xe609;</i>
-                    <p class="service-desc">
-                        <span class="service-desc-bold">担保</span>
-                        <span class="service-desc-normal">交易</span>
-                    </p>
-                </li>
-                <li class="service-split-line">
-                    <span></span>
-                </li>
-                <li class="service-item">
-                    <i class="iconfont">&#xe60b;</i>
-                    <p class="service-desc">
-                        <span class="service-desc-bold">特色</span>
-                        <span class="service-desc-normal">服务</span>
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class="site-footer-navs clearfix">
-            <div class="footer-nav-item">
-                <h4 class="footer-nav-title">帮助中心</h4>
-                <ul>
-                    <li><a href="/home/artical/1" target="_blank">使用说明</a></li>
-                    <li><a href="/home/artical/6" target="_blank">付款帮助</a></li>
-                </ul>
-            </div>
-            <div class="footer-nav-item">
-                <h4 class="footer-nav-title">售后保障</h4>
-                <ul>
-                    <li><a target="_blank" href="/home/artical/4">售后保障</a></li>
-                    <li><a target="_blank" href="/home/artical/5">自助服务</a></li>
-                    <li><a target="_blank" href="/home/artical/7">服务协议</a></li>
-                </ul>
-            </div>
-            <div class="footer-nav-item">
-                <h4 class="footer-nav-title">关于我们</h4>
-                <ul>
-                    <li><a target="_blank" href="/home/artical/2">了解我们</a></li>
-                    <li><a target="_blank" href="/home/artical/3">联系我们</a></li>
-                </ul>
-            </div>
-            <div class="footer-nav-item">
-                <h4 class="footer-nav-title">关注我们</h4>
-                <ul>
-                    <li><a target="_blank" href="http://weibo.com/u/2335966217">新浪微博</a></li>
-                    <li>
-                        <a class="meizu-footer-wechat">
-                            官方微信
-                            <img src="__PUBLIC__/Home/images/qrcode_for_gh_6f79b0a839f6_344.jpg" alt="微信二维码">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-nav-custom">
-                <h4 class="nav-custom-title">24小时全国服务热线</h4>
-                <a href="tel:0371-63337761"><h3 class="nav-custom-number">0371-63337761</h3></a>
-                <a class="nav-custom-btn" style="color:#fff!important" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3260312512&site=qq&menu=yes">
-                    9:00-6:30在线客服
-                </a>
-            </div>
-        </div>
-        <div class="site-footer-end">
-            <p>
-                Copyright © 2015 koahub.com All Rights Reserved 豫ICP备16009619号
-            </p>
-        </div>
-    </div>
-</div>
-
-<div style="display:none">
-    <script src="__PUBLIC__/Home/js/stat.js" language="JavaScript"></script>
-</div>
-<script type="text/javascript" src="__PUBLIC__/Home/js/bundle.js"></script>
-
-<!--<script src="__PUBLIC__/Home/js/jquery.pjax.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/jquery.lazyload.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/jquery.form.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/bootstrap.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/layer.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/nprogress.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/swiper.jquery.min.js"></script>-->
-
-<script type="text/javascript" src="__PUBLIC__/Home/js/base.min.js"></script>
-<script src="__PUBLIC__/Home/js/gt.js"></script>
-
-<!-- daterangepicker -->
-<script src="__PUBLIC__/Home/js/moment.min.js"></script>
-<script src="__PUBLIC__/Home/js/daterangepicker.js"></script>
-<!--inotify-->
-<!--<script src="__PUBLIC__/Home/js/inotify.min.js"></script>-->
-
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/wangeditor.min.css">
-<script type="text/javascript" src="__PUBLIC__/Home/js/wangeditor.min.js"></script>
-
-<script type="text/javascript">
-// var iNotify = new iNotify({
-//     effect: 'flash',
-//     interval: 500,
-//     message:"有消息拉！2",
-//     audio:{
-//         file: ['/home/sound/alert.mp3']
-//     },
-//     notification:{
-//         title:"通知！",
-//         body:'您来了一条新消息'
-//     }
-// });
-
-// $(function(){
-//     $.ajax({
-//         type: "get",
-//         url: '/home/public/feedback/notify',
-//         success: function(data){
-//             console.log(data);
-//         }
-//     });
-// });
-</script>
+ @include('home/footer')
 
 </body>
 </html>

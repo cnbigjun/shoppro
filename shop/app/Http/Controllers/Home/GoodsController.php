@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Good;
 
 class GoodsController extends Controller
 {
@@ -14,9 +15,10 @@ class GoodsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function goods()
+    public function goods($goods_id)
     {
-        return view('home.goods');
+    	$goods = Good::where('is_on_sale',1)->find($goods_id);
+        return view('home.goods',['goods'=>$goods]);
     }
 
 }

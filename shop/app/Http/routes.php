@@ -86,7 +86,7 @@ Route::get('/','Home\IndexController@index');
 Route::get('catlist','Home\CatController@catlist');
 
 // 商品内容页
-Route::get('goods','Home\GoodsController@goods');
+Route::get('goods/{goods_id}','Home\GoodsController@goods');
 //test
 
 

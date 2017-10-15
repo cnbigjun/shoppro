@@ -13,14 +13,14 @@
     <link rel="shortcut icon" href="/public/favicon.ico" />
     
     <!-- common css -->
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/bundle.css">
+    <link rel="stylesheet" href="/__PUBLIC__/Home/css/bundle.css">
     
     <!--<link href="__PUBLIC__/Home/css/bootstrap.min.css" rel="stylesheet">-->
     <!--<link href="__PUBLIC__/Home/css/nprogress.min.css" rel="stylesheet">-->
     <!--<link href="__PUBLIC__/Home/css/swiper.min.css" rel="stylesheet">-->
     
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/base.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/iconfont.css">
+    <link rel="stylesheet" href="/__PUBLIC__/Home/css/base.min.css">
+    <link rel="stylesheet" href="/__PUBLIC__/Home/css/iconfont.css">
     
     <style type="text/css">
         body {
@@ -31,11 +31,11 @@
     </style>
 
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="/__PUBLIC__/Home/css/daterangepicker-bs3.css">
     
     <!--<script src="__PUBLIC__/Home/js/jquery-2.1.4.min.js"></script>-->
     
-    <script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+    <script src="/__PUBLIC__/Home/js/jquery.min.js"></script>
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,7 +55,7 @@
     
     <div class="mzcontainer">
         <div class="topbar-nav">
-            <a href="/home/index/index">KoaHub软件市场 - 国内首家软件交易平台</a>
+            <a href="/">KoaHub软件市场 - 国内首家软件交易平台</a>
         </div>
         <div class="topbar-right">
             <ul class="topbar-info">
@@ -101,8 +101,8 @@
 <div class="site-header">
     <div class="mzcontainer">
         <div class="header-logo">
-            <a href="/home/index/index">
-                <img src="__PUBLIC__/Home/images/logo.svg" rel="nofollow" alt="koahub logo" title="koahub logo">
+            <a href="/">
+                <img src="/__PUBLIC__/Home/images/logo.svg" rel="nofollow" alt="koahub logo" title="koahub logo">
             </a>
         </div>
         <div class="header-nav">
@@ -618,7 +618,7 @@
                             <div class="swiper-wrapper" style="padding:5px;">
                                 <div class="swiper-slide active-nav">
                                     <div>
-                                        <img src="__PUBLIC__/Home/images/1af33a20-1c3d-11e7-b6de-c7b3538270f2.png" style="width: 60px;height: 60px" alt="">
+                                        <img src="/__PUBLIC__/Home/images/1af33a20-1c3d-11e7-b6de-c7b3538270f2.png" style="width: 60px;height: 60px" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -629,7 +629,7 @@
                             <div class="swiper-wrapper" style="padding: 10px;">
                                 <div class="swiper-slide">
                                     <a href="javascript:void(0);" target="_blank">
-                                        <img src="__PUBLIC__/Home/images/1af33a20-1c3d-11e7-b6de-c7b3538270f2.png" alt="" style="width: 420px;height: 420px">
+                                        <img src="/__PUBLIC__/Home/images/1af33a20-1c3d-11e7-b6de-c7b3538270f2.png" alt="" style="width: 420px;height: 420px">
                                     </a>
                                 </div>
                             </div>
@@ -637,15 +637,15 @@
                     </div>
                 </div>
                 <div class="right">
-                    <div class="name">商城管理后台 (wemall7) 
+                    <div class="name">{{$goods->goods_name}} 
                         <span class="Label">源码</span> 
                     </div>
-                    <div class="description">wemall7 商城管理后台系统，含api，不含微信端。</div>
+                    <div class="description">{{$goods->goods_brief}}</div>
                     <div class="price-panel">
                         <div class="price">
-                            <span class="subscript">¥ </span>3000 
+                            <span class="subscript">¥ </span>{{$goods->plus_price}} 
                             <del class="rmd-product-price" style="color: #ccc;margin-left: 6px;">
-                                ¥<span style="font-size: 18px;">3000</span>
+                                ¥<span style="font-size: 18px;">{{$goods->market_price}}</span>
                             </del>
                              
                             <span class="qrcode">
@@ -661,14 +661,14 @@
                     <div class="purchase">
                          
                         <div class="btn-buy">
-                            <a href="/home/cart/add/82">加入购物车</a>
+                            <a href="{{url('cart',$goods->goods_id)}}">加入购物车</a>
                         </div>
                                                   <div class="btn-shop">
-                            <a href="/home/product/shop/1">进入店铺</a>
+                            <a href="/">进入店铺</a>
                         </div>
                     </div>
                     <div class="buy">
-                        <a href="http://wpa.qq.com/msgrd?v=3&uin=1642709442&site=qq&menu=yes" target="_blank">
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=88888888&site=qq&menu=yes" target="_blank">
                             <i class="iconfont icon-kf">&#xe61c;</i>
                             <span class="buy-text">在线客服1</span>
                         </a>
@@ -693,50 +693,13 @@
                         </li>
                     </ul>
                 </div>
-                <div class="tab-pane fade in active" id="detail" style="text-align: center">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-                                                        <p><br></p><p><img src="__PUBLIC__/Home/images/f133ffe0-1dc1-11e7-b91b-953390e2cc9a.png" alt="lALOvErQe80cLs0EsA_1200_7214" style="max-width:100%;"><br></p>
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                <p><br></p>
-                                
-                                
-                                
-                                
-                                
-                                </div>
-                <div class="tab-pane fade in" id="function">                                                                                                            <p><br></p>
-                                
-                                
-                                </div>
-                <div class="tab-pane fade in" id="params">                                                                                                                                                                                                                                                                                                                                                                                                                                                thinkphp5.0.7
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                </div>
+                <div class="tab-pane fade in active" id="detail" style="text-align: center">                        
+<!--                     <p><br></p><p><img src="/__PUBLIC__/Home/images/f133ffe0-1dc1-11e7-b91b-953390e2cc9a.png" alt="lALOvErQe80cLs0EsA_1200_7214" style="max-width:100%;"><br></p>
+<p><br></p> -->
+                {{$goods->goods_desc}}
+                </div>
+                <div class="tab-pane fade in" id="function"><p><br></p></div>
+                <div class="tab-pane fade in" id="params">laravel商城构建</div>
             </div>
         </div>
     </div>
@@ -787,6 +750,7 @@ $(document).ready(function() {
 
 </div>
 
+<!-- 底部开始 -->
 <style type="text/css">
     .site-footer .service-item > i {
         font-size: 48px;
@@ -888,7 +852,7 @@ $(document).ready(function() {
                     <li>
                         <a class="meizu-footer-wechat">
                             官方微信
-                            <img src="__PUBLIC__/Home/images/qrcode_for_gh_6f79b0a839f6_344.jpg" alt="微信二维码">
+                            <img src="/__PUBLIC__/Home/images/qrcode_for_gh_6f79b0a839f6_344.jpg" alt="微信二维码">
                         </a>
                     </li>
                 </ul>
@@ -908,11 +872,12 @@ $(document).ready(function() {
         </div>
     </div>
 </div>
+<!-- 底部结束 -->
 
 <div style="display:none">
-    <script src="__PUBLIC__/Home/js/stat.js" language="JavaScript"></script>
+    <script src="/__PUBLIC__/Home/js/stat.js" language="JavaScript"></script>
 </div>
-<script type="text/javascript" src="__PUBLIC__/Home/js/bundle.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Home/js/bundle.js"></script>
 
 <!--<script src="__PUBLIC__/Home/js/jquery.pjax.min.js"></script>-->
 <!--<script src="__PUBLIC__/Home/js/jquery.lazyload.min.js"></script>-->
@@ -922,17 +887,17 @@ $(document).ready(function() {
 <!--<script src="__PUBLIC__/Home/js/nprogress.min.js"></script>-->
 <!--<script src="__PUBLIC__/Home/js/swiper.jquery.min.js"></script>-->
 
-<script type="text/javascript" src="__PUBLIC__/Home/js/base.min.js"></script>
-<script src="__PUBLIC__/Home/js/gt.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Home/js/base.min.js"></script>
+<script src="/__PUBLIC__/Home/js/gt.js"></script>
 
 <!-- daterangepicker -->
-<script src="__PUBLIC__/Home/js/moment.min.js"></script>
-<script src="__PUBLIC__/Home/js/daterangepicker.js"></script>
+<script src="/__PUBLIC__/Home/js/moment.min.js"></script>
+<script src="/__PUBLIC__/Home/js/daterangepicker.js"></script>
 <!--inotify-->
 <!--<script src="__PUBLIC__/Home/js/inotify.min.js"></script>-->
 
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/wangeditor.min.css">
-<script type="text/javascript" src="__PUBLIC__/Home/js/wangeditor.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/__PUBLIC__/Home/css/wangeditor.min.css">
+<script type="text/javascript" src="/__PUBLIC__/Home/js/wangeditor.min.js"></script>
 
 <script type="text/javascript">
 // var iNotify = new iNotify({
