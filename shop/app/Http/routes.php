@@ -78,6 +78,14 @@ Route::post('admin/editgood/{goods_id}','Admin\GoodsController@editPost');
 /*
  * 前端路由
  */
+//登录注册
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
 
 // 首页路由
 Route::get('/','Home\IndexController@index');
@@ -86,15 +94,26 @@ Route::get('/','Home\IndexController@index');
 Route::get('catlist/{cat_id}','Home\CatController@catlist');
 
 // 商品内容页
+
 Route::get('goods/{goods_id}','Home\GoodsController@goods');
-//test
 
 
 
 
 
 
-//以下为前台页面
+
+
+//购物车
+Route::get('/addProduct/{productId}', 'Home\CartController@addItem');
+Route::get('/removeItem/{productId}', 'Home\CartController@removeItem');
+Route::get('/cart', 'Home\CartController@showCart');
+
+
+
+//会员中心
 Route::get('member','Home\MemController@index');
+
+//订单类
 Route::get('order','Home\MemController@order');
-Route::get('cart','Home\CartgitController@index');
+
