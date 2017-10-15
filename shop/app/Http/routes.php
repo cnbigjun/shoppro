@@ -83,7 +83,7 @@ Route::post('admin/editgood/{goods_id}','Admin\GoodsController@editPost');
 Route::get('/','Home\IndexController@index');
 
 // 商品栏目
-Route::get('catlist','Home\CatController@catlist');
+Route::get('catlist/{cat_id}','Home\CatController@catlist');
 
 // 商品内容页
 Route::get('goods/{goods_id}','Home\GoodsController@goods');

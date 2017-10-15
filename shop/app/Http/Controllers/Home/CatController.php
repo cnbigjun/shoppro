@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Good;
+use App\Category;
 
 class CatController extends Controller
 {
@@ -14,9 +16,11 @@ class CatController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function catlist()
+    public function catlist($cat_id)
     {
-        return view('home.catlist');
+    	$categorys = Category::where('parent_id',0)->get();
+    	$goods = Good::where('cat_id',$cat_id)->get();
+        return view('home.catlist',['goods'=>$goods,'categorys'=>$categorys]);
     }
 
 }
