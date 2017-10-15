@@ -8,7 +8,6 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Cart;
 use App\CartItem;
-use App\Good;
 use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
@@ -38,7 +37,6 @@ class CartController extends Controller
         $cartItem->save();
 //        $cartdrop=CartItem::where('goods_id','=',$goods_id)->first();
 //        $cartdrop->delete();
-        exit;
         return redirect('/cart');
 
     }

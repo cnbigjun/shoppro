@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -583,7 +583,7 @@
 <div style="display:none">
     <script src="/__PUBLIC__/Home/js/stat.js" language="JavaScript"></script>
 </div>
-{{--<script type="text/javascript" src="/__PUBLIC__/Home/js/bundle.js"></script>--}}
+<script type="text/javascript" src="/__PUBLIC__/Home/js/bundle.js"></script>
 
 <!--<script src="__PUBLIC__/Home/js/jquery.pjax.min.js"></script>-->
 <!--<script src="__PUBLIC__/Home/js/jquery.lazyload.min.js"></script>-->

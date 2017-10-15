@@ -112,8 +112,8 @@ Route::get('/cart', 'Home\CartController@showCart');
 
 
 //会员中心
-Route::get('member','Home\MemController@index');
+Route::get('/member','Home\MemController@index');
 
 //订单类
-Route::get('order','Home\MemController@order');
+Route::get('/order','Home\MemController@order');
 

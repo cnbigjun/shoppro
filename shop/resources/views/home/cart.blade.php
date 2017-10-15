@@ -490,7 +490,7 @@
                         </div>
                     
                         <div class="confirm">
-                            <a href="/home/order/add" class="btn btn-primary btn-lg btn-block btn-distance" pjax-push-false>提交订单</a>
+                            <a href="{{url('/order')}}" class="btn btn-primary btn-lg btn-block btn-distance" pjax-push-false>提交订单</a>
                             <a href="/home/index/index" class="btn btn-default btn-lg btn-block btn-distance btn-col">继续购买</a>
                         </div>
                     

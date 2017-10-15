@@ -13,14 +13,14 @@
     <link rel="shortcut icon" href="/public/favicon.ico" />
     
     <!-- common css -->
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/bundle.css">
+    <link rel="stylesheet" href="/__PUBLIC__/Home/css/bundle.css">
     
-    <!--<link href="__PUBLIC__/Home/css/bootstrap.min.css" rel="stylesheet">-->
-    <!--<link href="__PUBLIC__/Home/css/nprogress.min.css" rel="stylesheet">-->
-    <!--<link href="__PUBLIC__/Home/css/swiper.min.css" rel="stylesheet">-->
+    <!--<link href="/__PUBLIC__/Home/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="/__PUBLIC__/Home/css/nprogress.min.css" rel="stylesheet">-->
+    <!--<link href="/__PUBLIC__/Home/css/swiper.min.css" rel="stylesheet">-->
     
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/base.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/iconfont.css">
+    <link rel="stylesheet" href="/__PUBLIC__/Home/css/base.min.css">
+    <link rel="stylesheet" href="/__PUBLIC__/Home/css/iconfont.css">
     
     <style type="text/css">
         body {
@@ -31,17 +31,17 @@
     </style>
 
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="/__PUBLIC__/Home/css/daterangepicker-bs3.css">
     
-    <!--<script src="__PUBLIC__/Home/js/jquery-2.1.4.min.js"></script>-->
+    <!--<script src="/__PUBLIC__/Home/js/jquery-2.1.4.min.js"></script>-->
     
-    <script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+    <script src="/__PUBLIC__/Home/js/jquery.min.js"></script>
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="__PUBLIC__/Home/js/html5shiv.min.js"></script>
-    <script src="__PUBLIC__/Home/js/respond.min.js"></script>
+    <script src="/__PUBLIC__/Home/js/html5shiv.min.js"></script>
+    <script src="/__PUBLIC__/Home/js/respond.min.js"></script>
     <![endif]-->
 </head>
 <body style="width:expression(document.body.clientWidth <= 1240? '1240px': 'auto');">
@@ -102,7 +102,7 @@
     <div class="mzcontainer">
         <div class="header-logo">
             <a href="/home/index/index">
-                <img src="__PUBLIC__/Home/images/logo.svg" rel="nofollow" alt="koahub logo" title="koahub logo">
+                <img src="/__PUBLIC__/Home/images/logo.svg" rel="nofollow" alt="koahub logo" title="koahub logo">
             </a>
         </div>
         <div class="header-nav">
@@ -475,12 +475,12 @@
                                     }
                                 
                                     .orderbox {
-                                        height: 230px;
+                                        min-height:230px;
                                         padding: 0 30px;
                                     }
                                 
                                     .orderbox div {
-                                        height: 100%;
+                                        min-height:230px;
                                         float: left;
                                     }
                                 
@@ -552,9 +552,9 @@
                                     <ul>
                                         <div class="status-info">
                                             <h5 class="state">
-                                                    <span style="color:#e02b41">未支付</span>
+                                                <span style="color:#e02b41">未支付</span>
                                             </h5>
-                                            <h4 class="amount">订单金额：<span class="amt">16000</span>元</h4>
+                                            <h3 class="amount">订单金额：<span class="amt">{{$total}}</span>元<span class="amt"><a href="" style="color:red;">&nbsp&nbsp&nbsp立即支持</a></span></h3>
                                             <ul class="list-inline stat">
                                                 <li>2017-09-01 10:46:11</li>
                                                 <li>订单号 : 1709011046105</li>
@@ -562,25 +562,24 @@
                                                 <li>卡券 : 未使用</li>
                                             </ul>
                                         </div>
-                                
-                                
-                                        <a class="btn payment" href="/home/pay/alipay/561">立即支付</a>
-                                
-                                
+
+
+
+
+                                        @foreach($items as $item)
                                         <li class="orderbox">
-                                            <div style="width:165px;"><img src="__PUBLIC__/Home/images/de943c40-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                                                           width="105px"></div>
+                                            <div style="width:165px;"><img src="/upload/{{explode(',',$item->good->goods_img)[0]}}" width="105px"></div>
                                             <div>
                                                 <ul>
                                                     <li style="height: 60px;">
-                                                        <span class="font-s">单用户商城</span><br/>
-                                                        <span class="font-s">16000 * 1</span>
+                                                        <span class="font-s">{{$item->good->goods_name}}</span><br/>
+                                                        <span class="font-s">{{$item->good->plus_price}}</span>
                                                     </li>
                                                 </ul>
                                             </div>
-                                            
                                         </li>
-                                
+                                        @endforeach
+
                                     </ul>
                                 </div>
                                 
@@ -697,7 +696,7 @@
                     <li>
                         <a class="meizu-footer-wechat">
                             官方微信
-                            <img src="__PUBLIC__/Home/images/qrcode_for_gh_6f79b0a839f6_344.jpg" alt="微信二维码">
+                            <img src="/__PUBLIC__/Home/images/qrcode_for_gh_6f79b0a839f6_344.jpg" alt="微信二维码">
                         </a>
                     </li>
                 </ul>
@@ -719,29 +718,29 @@
 </div>
 
 <div style="display:none">
-    <script src="__PUBLIC__/Home/js/stat.js" language="JavaScript"></script>
+    <script src="/__PUBLIC__/Home/js/stat.js" language="JavaScript"></script>
 </div>
-<script type="text/javascript" src="__PUBLIC__/Home/js/bundle.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Home/js/bundle.js"></script>
 
-<!--<script src="__PUBLIC__/Home/js/jquery.pjax.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/jquery.lazyload.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/jquery.form.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/bootstrap.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/layer.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/nprogress.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/swiper.jquery.min.js"></script>-->
+<!--<script src="/__PUBLIC__/Home/js/jquery.pjax.min.js"></script>-->
+<!--<script src="/__PUBLIC__/Home/js/jquery.lazyload.min.js"></script>-->
+<!--<script src="/__PUBLIC__/Home/js/jquery.form.min.js"></script>-->
+<!--<script src="/__PUBLIC__/Home/js/bootstrap.min.js"></script>-->
+<!--<script src="/__PUBLIC__/Home/js/layer.min.js"></script>-->
+<!--<script src="/__PUBLIC__/Home/js/nprogress.min.js"></script>-->
+<!--<script src="/__PUBLIC__/Home/js/swiper.jquery.min.js"></script>-->
 
-<script type="text/javascript" src="__PUBLIC__/Home/js/base.min.js"></script>
-<script src="__PUBLIC__/Home/js/gt.js"></script>
+<script type="text/javascript" src="/__PUBLIC__/Home/js/base.min.js"></script>
+<script src="/__PUBLIC__/Home/js/gt.js"></script>
 
 <!-- daterangepicker -->
-<script src="__PUBLIC__/Home/js/moment.min.js"></script>
-<script src="__PUBLIC__/Home/js/daterangepicker.js"></script>
+<script src="/__PUBLIC__/Home/js/moment.min.js"></script>
+<script src="/__PUBLIC__/Home/js/daterangepicker.js"></script>
 <!--inotify-->
-<!--<script src="__PUBLIC__/Home/js/inotify.min.js"></script>-->
+<!--<script src="/__PUBLIC__/Home/js/inotify.min.js"></script>-->
 
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/wangeditor.min.css">
-<script type="text/javascript" src="__PUBLIC__/Home/js/wangeditor.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/__PUBLIC__/Home/css/wangeditor.min.css">
+<script type="text/javascript" src="/__PUBLIC__/Home/js/wangeditor.min.js"></script>
 
 <script type="text/javascript">
 // var iNotify = new iNotify({
