@@ -400,19 +400,20 @@
                             -webkit-font-smoothing: antialiased;
                         }
                     </style>
-                    
+
+                    @foreach($items as $item)
                     <div class="rmd-box rmd-box-product" style="margin-bottom: 60px;">
                         <a href="/home/product/72">
                             <div class="rmd-product-detail">
-                                <img src="__PUBLIC__/Home/images/de9303c0-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
+                                <img src="/upload/{{explode(',',$item->good->goods_img)[0]}}"
                                      width="180" height="200" style="display: inline;">
                                 <div class="rmd-product-desc">
-                                    <h4 class="rmd-product-title">多用户商城</h4>
+                                    <h4 class="rmd-product-title">{{$item->good->goods_name}}</h4>
                                     <h6 class="rmd-product-subtitle"></h6>
                                     <!-- TODO 替换为内容-->
                                     <p class="rmd-product-price">
                                         ¥
-                                        <span>16000</span>
+                                        <span>{{$item->good->plus_price}}</span>
                     
                                     </p>
                                 </div>
@@ -427,45 +428,18 @@
                         </a>
                     
                         <div style="margin-top: 40px;text-align: center;margin-bottom: 6px">
-                            <a href="/home/cart/del/72" pjax-push-false>
+                            <a href="{{url('removeitem',$item->id)}}" pjax-push-false>
                                 <div class="box-sign" style="background-color: #dd4b39;margin-left: 100px"><i class="iconfont">&#xe601;</i>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="rmd-box rmd-box-product" style="margin-bottom: 60px;">
-                        <a href="/home/product/61">
-                            <div class="rmd-product-detail">
-                                <img src="__PUBLIC__/Home/images/de93a000-1369-11e7-ab1b-f7c3fd5f14b2.jpg"
-                                     width="180" height="200" style="display: inline;">
-                                <div class="rmd-product-desc">
-                                    <h4 class="rmd-product-title">单用户商城（App）</h4>
-                                    <h6 class="rmd-product-subtitle"></h6>
-                                    <!-- TODO 替换为内容-->
-                                    <p class="rmd-product-price">
-                                        ¥
-                                        <span>16000</span>
-                    
-                                    </p>
-                                </div>
-                                <div style="text-align: left;color: #999;font: 12px/12px SimSun;margin: 10px 4px 0 0;float: left">
-                                    koahub商城
-                                </div>
-                                <div style="text-align: right;color: #999;font: 12px/12px SimSun;margin: 10px 4px 0 0;float: right">
-                                    
-                                </div>
-                            </div>
-                    
-                        </a>
-                    
-                        <div style="margin-top: 40px;text-align: center;margin-bottom: 6px">
-                            <a href="/home/cart/del/61" pjax-push-false>
-                                <div class="box-sign" style="background-color: #dd4b39;margin-left: 100px"><i class="iconfont">&#xe601;</i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    
+                    @endforeach
+
+
+
+
+
                     
                     <script type="text/javascript">
                         $(function () {
@@ -511,8 +485,8 @@
                     </style>
                     <div class="shortcut">
                         <div class="mod-total">
-                            共<em class="vm-price">2</em>件商品
-                            总计:<em class="vm-price">￥32000.00</em>
+                            共<em class="vm-price">{{$number}}</em>件商品
+                            总计:<em class="vm-price">￥{{$total}}</em>
                         </div>
                     
                         <div class="confirm">

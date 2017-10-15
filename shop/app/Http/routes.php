@@ -105,8 +105,8 @@ Route::get('goods/{goods_id}','Home\GoodsController@goods');
 
 
 //购物车
-Route::get('/addProduct/{productId}', 'Home\CartController@addItem');
-Route::get('/removeItem/{productId}', 'Home\CartController@removeItem');
+Route::get('/addcart/{goods_id}', 'Home\CartController@addCart');
+Route::get('/removeitem/{id}', 'Home\CartController@removeItem');
 Route::get('/cart', 'Home\CartController@showCart');
 
 

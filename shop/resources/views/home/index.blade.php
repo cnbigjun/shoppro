@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>一个站长 - 软件市场 软件交易 源码交易</title>
+    <title>koahub软件市场 软件交易 源码交易</title>
     <meta name="description"
           content="koahub是国内首家软件交易平台，提供自助服务、担保交易、售后保障等服务，保障商家及购买方合作顺利。">
     <meta name="keywords" content="koahub软件市场,软件市场,软件,源码,软件交易,软件交易平台,源码交易,源码交易平台,源码交易网">
@@ -51,7 +51,7 @@
     <i class="iconfont" style="margin-right: 6px">&#xe619;</i>暂时不支持此浏览器
 </div>
 
- @include('home/header')
+@include('home/header')
 
 <script type="text/javascript">
     $(function(){
@@ -195,7 +195,7 @@
             
                         @foreach($categorys as $c)
                         <li class="home-category-nav-item">
-                            <a class="category-nav-link" href="{{url('catlist',$c->cat_id)}}">
+                            <a class="category-nav-link" href="/home/search/index?menu=6">
                                 <span>{{$c->cat_name}}</span> <i class="iconfont" style="color:#dd4b39">&#xe622;</i>
                             </a>
                         </li>
@@ -405,8 +405,7 @@
                             <a href="{{url('goods',$g->goods_id)}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="/upload/{{explode(',',$g->goods_img)[0]}}"
-                                        style="display: inline;width: 243px;height: 243px">
+                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="/upload/{{explode(',',$g->goods_img)[0]}}" style="display: inline;width: 243px;height: 243px">
                                     <div class="rmd-product-desc" style="margin-top: 20px;">
                                         <h4 class="rmd-product-title">{{$g->goods_name}}</h4>
                                         <h6 class="rmd-product-subtitle"></h6>
@@ -444,10 +443,10 @@
                     
                         @foreach($goods as $g)
                         <div class="rmd-box rmd-box-product">
-                            <a href="{{url('goods',$g->goods_id)}}">
+                            <a href="{{url('goods')}}">
                         
                                 <div class="rmd-product-detail" style="padding: 0">
-                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="/upload/{{explode(',',$g->goods_img)[0]}}"
+                                    <img class="lazy" src="__PUBLIC__/Home/images/blank.gif" data-original="__PUBLIC__/Home/uploads/fbd27940-136c-11e7-ab1b-f7c3fd5f14b2.jpg"
                                         style="display: inline;width: 243px;height: 243px">
                                     <div class="rmd-product-desc" style="margin-top: 20px;">
                                         <h4 class="rmd-product-title">{{$g->goods_name}}</h4>

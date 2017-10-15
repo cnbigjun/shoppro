@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Cart;
 use App\CartItem;
+use App\Good;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -20,7 +22,7 @@ class CartController extends Controller
         $this->middleware('auth');
     }
 
-    public function addItem ($goods_id){
+    public function addCart ($goods_id){
 
         $cart = Cart::where('user_id',Auth::user()->id)->first();
 
@@ -31,10 +33,12 @@ class CartController extends Controller
         }
 
         $cartItem  = new Cartitem();
-        $cartItem->product_id=$goods_id;
+        $cartItem->goods_id=$goods_id;
         $cartItem->cart_id= $cart->id;
         $cartItem->save();
-
+//        $cartdrop=CartItem::where('goods_id','=',$goods_id)->first();
+//        $cartdrop->delete();
+        exit;
         return redirect('/cart');
 
     }
@@ -48,14 +52,13 @@ class CartController extends Controller
             $cart->save();
         }
 
-        $items = $cart->cartItems;
-        $total=0;
+        $items=$cart->cartItems;
         $number=0;
-        foreach($items as $item){
-            $total+=$item->goods->plus_price;
+        $total=0;
+        foreach ($items as $item){
+            $total+=$item->good->plus_price;
             $number+=1;
         }
-
         return view('home.cart',['items'=>$items,'total'=>$total,'number'=>$number]);
     }
 

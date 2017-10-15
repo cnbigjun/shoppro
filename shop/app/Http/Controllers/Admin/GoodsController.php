@@ -42,6 +42,8 @@ class GoodsController extends Controller
             }
         }
 //        $goods=explode(',',$pathgoods);
+//        $goods=explode(',',$goods->goods_img)[0];
+
 //        print_r($goods);
 //        exit();
         $good=new Good();

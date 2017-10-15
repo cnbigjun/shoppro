@@ -11,8 +11,8 @@ class CartItem extends Model
         return $this->belongsTo('App\Cart');
     }
 
-    public function product()
+    public function good()
     {
-        return $this->belongsTo('App\Good');
+        return $this->belongsTo('App\Good','goods_id');
     }
 }
