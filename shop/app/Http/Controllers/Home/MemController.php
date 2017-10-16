@@ -29,8 +29,34 @@ class MemController extends Controller
         $total=0;
         foreach ($items as $item){
             $total+=$item->good->plus_price;
+            $cart_id=$item->cart_id;
             $number+=1;
         }
-        return view('home.order',['items'=>$items,'total'=>$total,'number'=>$number]);
+        return view('home.order',['items'=>$items,'total'=>$total,'number'=>$number,'cart_id'=>$cart_id]);
     }
+    public function pay(Request $req,$cart_id)
+    {
+        // dd($req->all());
+        $row=[];
+        $row['v_amount']=$req->money;
+        $row['v_moneytype']='CNY';
+        $row['v_oid']=date('YmdHis').mt_rand(1000,9999);
+        $row['v_mid']='1009002';
+        $row['v_url']='http://zh.com/paydone/'.$cart_id;
+        $row['key']='DJFKklslkdf%78ew9@@@@';
+        $row['v_md5info']=strtoupper(md5(implode('',$row)));
+        $items=CartItem::where('cart_id','=',$cart_id)->get();
+        return view('home.pay',$row);
+
+    }
+    public function  payDone(Request $req,$cart_id){
+        $md5=strtoupper(md5($req->v_oid . $req->v_pstatus . $req->v_amount . $req->v_moneytype . 'DJFKklslkdf%78ew9@@@@'));
+        if ($md5!==$req->v_md5str) {
+            return redirect('/');
+        }
+        return '订单支付成功';
+//        return redirect('/');
+    }
+
+
 }

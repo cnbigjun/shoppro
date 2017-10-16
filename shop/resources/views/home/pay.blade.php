@@ -33,9 +33,9 @@
     <!-- Daterange picker -->
     <link rel="stylesheet" href="/__PUBLIC__/Home/css/daterangepicker-bs3.css">
     
-    {{--<script src="/__PUBLIC__/Home/js/jquery-2.1.4.min.js"></script>--}}
+    <!--<script src="/__PUBLIC__/Home/js/jquery-2.1.4.min.js"></script>-->
     
-    {{--<script src="/__PUBLIC__/Home/js/jquery.min.js"></script>--}}
+    <script src="/__PUBLIC__/Home/js/jquery.min.js"></script>
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -360,239 +360,185 @@
     });
 </script>
 <div id="pjax-container">
-    <div class="home-full-box">
+    <div class="page-nav">
+    <div class="mzcontainer page-title">确认订单</div>
+</div>
+<div class="home-full-box">
     <div class="mzcontainer">
         <div class="home-panel home-rmd home-floor">
             <div class="home-rmd-main">
-                <div class="rmd-box rmd-box-nav">
-                    <div class="home-category-list">
-                        <ul class="home-category-nav">
-                            <div class="category-nav-link" style="padding-left: 36px;height: 57px;
-                        line-height: 57px;color: #8d8d8d;">
-                                <i class="iconfont" style="margin-right: 10px;">&#xe612;</i><span>用户中心</span>
+                <div class="home-rmd-cotent left" style="min-height: inherit;">
+                    <style type="text/css">
+                        .buy-success {
+                            padding: 80px 45px;
+                        }
+
+                        .buy-success i {
+                            font-size: 80px;
+                            color: #dd4b39;
+                        }
+
+                        .success .tips {
+                            margin-top: 20px;
+                            line-height: 26px;
+                        }
+
+                        .success .tips .tips-title {
+                            float: left;
+                        }
+
+                        .success .tips .tips-contents {
+                            float: left;
+                            margin-left: 12px;
+                        }
+
+                        .success .payment {
+                            font-size: 16px;
+                            margin-top: 12px;
+                        }
+
+                        .success .payment-list li {
+                            border: 1px solid #e0e0e0;
+                            float: left;
+                            margin: 12px 12px 12px 0;
+                        }
+
+                        .coupon .select {
+                            height: 107px;
+                            border: 2px solid #e43a3d !important;
+                            background-image: url(/__PUBLIC__/Home/images/coupon-selected.png);
+                            background-repeat: no-repeat;
+                            background-position: bottom right;
+                        }
+
+                        .coupon .title {
+                            text-align: center;
+                            color: #fff;
+                            font-size: 16px;
+                            padding-top: 10px;
+                        }
+
+                        .coupon .time {
+                            text-align: center;
+                            color: #fff;
+                            font-size: 12px;
+                            padding-top: 6px;
+                        }
+                    </style>
+                    <div class="success">
+                        <div class="row buy-success">
+                            <div class="col-xs-3 text-center">
+                                <i class="iconfont">&#xe605;</i>
                             </div>
-                    
-                            <ul class="home-category-nav">
-                    
-                                <li class="home-category-nav-item">
-                                    <a class="category-nav-link" href="/home/user/index">
-                                        <span>我的账户</span>
-                                    </a>
-                                </li>
-                    
-                                <li class="home-category-nav-item">
-                                    <a class="category-nav-link" href="/home/order/index">
-                                        <span>我的订单</span>
-                                    </a>
-                                </li>
-                    
-                                <li class="home-category-nav-item">
-                                    <a class="category-nav-link" href="/home/coupon/index">
-                                        <span>我的卡券</span>
-                                    </a>
-                                </li>
-                    
-                                <li class="home-category-nav-item">
-                                    <a class="category-nav-link" href="/home/user/product">
-                                        <span>我的产品</span>
-                                    </a>
-                                </li>
-                                
-                                <li class="home-category-nav-item">
-                                    <a class="category-nav-link" href="/home/domain/index">
-                                        <span>我的授权</span>
-                                    </a>
-                                </li>
-                    
-                                <li class="home-category-nav-item">
-                                    <a class="category-nav-link" href="/home/feedback/index">
-                                        <span>我的售后</span>
-                                    </a>
-                                </li>
-                                
-                                <li class="home-category-nav-item">
-                                    <a class="category-nav-link" href="/home/appeal/index">
-                                        <span>我的申诉</span>
-                                    </a>
-                                </li>
-                    
-                            </ul>
-                    
-                        </ul>
-                    
-                    
-                    </div>
-                    
-                    <script type="text/javascript">
-                        $(document).ready(function () {
-                            var pathname = window.location.pathname + window.location.search;
-                            $('.home-category-nav').find('a[href="' + pathname + '"]').parent().addClass('active');
-                        });
-                    </script>                </div>
-                <div class="home-rmd-cotent">
-                    <div class="col-xs-9 main">
-                        <div class="main-right">
-                            <div class="right-content">
-                                <h3 class="account">我的订单</h3>
-                                <hr class="h-act">
 
-                                <style type="text/css">
-                                    .layout {
-                                        border: 1px solid #ededed;
-                                        margin-bottom: 30px;
-                                        margin-top: -1px;
-                                    }
-                                
-                                    .right-tab {
-                                        height: 55px;
-                                        font-size: 16px;
-                                        border-bottom: 1px solid #e7e7e7;
-                                    }
-                                
-                                    .right-tab ul {
-                                        line-height: 40px;
-                                    }
-                                
-                                    .right-tab a {
-                                        color: #333333;
-                                    }
-                                
-                                    .right-tab ul li {
-                                        line-height: 20px;
-                                        padding-right: 20px;
-                                        border-right: 1px solid #ededed;
-                                        margin-right: 10px;
-                                    }
-                                
-                                    .right-tab ul li:last-child{
-                                        border-right: 0;
-                                    }
-                                
-                                    .amount {
-                                        float: right;
-                                        margin-right: 30px;
-                                        color: #757575;
-                                    }
-                                
-                                    .orderbox {
-                                        min-height:230px;
-                                        padding: 0 30px;
-                                    }
-                                
-                                    .orderbox div {
-                                        min-height:230px;
-                                        float: left;
-                                    }
-                                
-                                    .orderbox ul {
-                                        margin-top: 24px;
-                                    }
-                                
-                                    .orderbox li {
-                                        margin-bottom: 8px;
-                                        margin-top: 80px
-                                    }
-                                
-                                    .list-inline {
-                                        margin-top: 10px;
-                                        padding-left: 0;
-                                        font-size: 16px;
-                                        list-style: none;
-                                    }
-                                
-                                    .state {
-                                        font-size: 18px;
-                                        color: #b2b2b2;
-                                        padding-left: 30px;
-                                        padding-top: 20px;
-                                    }
-                                
-                                    .font-s {
-                                        font-size: 16px;
-                                        color: #333333;
-                                    }
-                                
-                                    .payment {
-                                        background-color: #dd4b39;
-                                        color: #ffffff !important;
-                                        width: 120px;
-                                        height: 30px;
-                                        line-height: 16px;
-                                        margin-right: 30px;
-                                        border-radius: 3px;
-                                        font-size: 14px;
-                                        float: right;
-                                        margin-top: 90px;
-                                    }
-                                
-                                    .status-info {
-                                        border-bottom: 1px solid #fafafa;
-                                        margin-bottom: 30px;
-                                    }
-                                
-                                    .stat {
-                                        font-size: 14px;
-                                        color: #757575;
-                                        padding-left: 30px;
-                                        margin-bottom: 30px;
-                                    }
-                                
-                                    .amt {
-                                        font-size: 24px;
-                                    }
-                                </style>
-                                
-                                <div class="right-tab">
-                                    <ul class="list-inline">
-                                        <li style="color:#dd4b39;">产品订单</li>
-                                    </ul>
+                            <div class="col-xs-9" style="margin-top: 12px;">
+                                <h2>订单提交成功，应付金额 <span style="color: #e02b41" id="total">{{$v_amount}}</span> 元</h2>
+                                <div class="tips">
+                                    <div style="color: #e02b41">
+                                        <div class="tips-title">温馨提示:</div>
+                                        <div class="tips-contents">请在47小时59分内完成支付, 超时后将取消订单</div>
+                                    </div>
+                                    <br>
+                                    <div class="tips-title">购买商品:</div>
+                                    <div class="tips-contents">
+                                        多用户商城<br/>
+                                    </div>
                                 </div>
-                                
-                                <div class="layout">
-                                    <ul>
-                                        <div class="status-info">
-                                            <h5 class="state">
-                                                <span style="color:#e02b41">未支付</span>
-                                            </h5>
-                                            <form action="{{url('pay',$cart_id)}}"  method="post">
-                                                <input type="hidden" name="money" value="{{$total}}">
-                                            <h3 class="amount">订单金额：<span class="amt">{{$total}}</span>元&nbsp&nbsp&nbsp<span class="amt"><input type="submit"  value="提交订单" class="btn btn-danger" ></span></h3>
-                                            </form>
-                                            <ul class="list-inline stat">
-                                                <li>2017-09-01 10:46:11</li>
-                                                <li>订单号 : 1709011046105</li>
-                                                <li>店铺 : koahub商城</li>
-                                                <li>卡券 : 未使用</li>
-                                            </ul>
-                                        </div>
-
-
-
-
-                                        @foreach($items as $item)
-                                        <li class="orderbox">
-                                            <div style="width:165px;"><img src="/upload/{{explode(',',$item->good->goods_img)[0]}}" width="105px"></div>
-                                            <div>
-                                                <ul>
-                                                    <li style="height: 60px;">
-                                                        <span class="font-s">{{$item->good->goods_name}}</span><br/>
-                                                        <span class="font-s">{{$item->good->plus_price}}</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        @endforeach
-
-                                    </ul>
-                                </div>
-                                
-                                <div class="pull-right"><div><ul class="pagination no-margin" style="float: right"><li><a>共 1 条记录  1/1 页</a></li></ul></div></div>
-                                
                             </div>
                         </div>
+
+
+                        <div class="row">
+                            <div class="col-xs-12 payment">
+                                选择支付方式
+                            </div>
+
+                            <ul class="col-xs-12 payment-list">
+                                <li><a href="/home/pay/alipay/562" target="_self"><img src="/__PUBLIC__/Home/images/alipay.jpg"
+                                                                                                style="margin-left: 0;"></a>
+                                </li>
+
+                                <form method=post action="http://127.0.0.1/paytest/index.php">
+                                    <input type=hidden name=v_mid value="{{$v_mid}}">
+                                    <input type=hidden name=v_oid value="{{$v_oid}}">
+                                    <input type=hidden name=v_amount value="{{$v_amount}}">
+                                    <input type=hidden name=v_moneytype value="{{$v_moneytype}}">
+                                    <input type=hidden name=v_url value="{{$v_url}}">
+                                    <input type=hidden name=v_md5info value="{{$v_md5info}}">
+                                    <input class="btn btn-danger" type="submit" value="立即支付" style="margin-top: 30px;margin-left: 400px;">
+                                </form>
+
+
+                            </ul>
+                        </div>
                     </div>
-                </div>
+
+
+                    <script type="text/javascript">
+                        var total = '';
+                        var orderId = '562';
+                        function selectCoupon(id, obj) {
+                            if ($(obj).parent().hasClass('select')) {
+                                $.ajax({
+                                    type: "get",
+                                    url: '/home/order/update/' + orderId + '/coupon/del',
+                                    data: {
+                                        id: id
+                                    },
+                                    headers: {'X-PJAX': 'true'},
+                                    success: function (res) {
+                                        if (res.msg == 'success') {
+                                            $(obj).parent().removeClass('select');
+                                            $('#total').text(res.data.total);
+                                        }
+                                    }
+                                });
+                            } else {
+                                $(obj).parent().parent().find('li').removeClass('select');
+
+                                $.ajax({
+                                    type: "get",
+                                    url: '/home/order/update/' + orderId + '/coupon/' + id + '/add',
+                                    data: {
+                                        id: id
+                                    },
+                                    headers: {'X-PJAX': 'true'},
+                                    success: function (res) {
+                                        if (res.msg == 'success') {
+                                            $(obj).parent().addClass('select');
+                                            $('#total').text(res.data.total);
+                                        }
+                                    }
+                                });
+                            }
+                        }
+
+                        $(function () {
+                            $('#cartCount').html('2');
+                        })
+                    </script>                </div>
+
+                <div class="rmd-box rmd-box-nav" style="float: right;width: 376px">
+                    <style type="text/css">
+                        .recommend {
+                            padding: 30px;
+                            background-color: #fff;
+                            border: 0px;
+                        }
+                    
+                        .recommend .title {
+                            font-size: 18px;
+                            color: #333;
+                        }
+                    </style>
+                    <div class="recommend">
+                        <div class="title">为您推荐</div>
+                        <hr/>
+                        <div style="margin-bottom: 12px"><a href="http://www.koahub.com/home/product/1" target="_blank"><img src="/__PUBLIC__/Home/images/1f04ea60-91db-11e6-bc94-57bb4c292ef7.jpg" style="width: 100%"></a></div>
+                        <div style="margin-bottom: 12px"><a href="http://www.koahub.com/home/product/42" target="_blank"><img src="/__PUBLIC__/Home/images/cc5b8e60-1e87-11e7-b91b-953390e2cc9a.jpg" style="width: 100%"></a></div>
+                    </div>                </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -723,7 +669,7 @@
 <div style="display:none">
     <script src="/__PUBLIC__/Home/js/stat.js" language="JavaScript"></script>
 </div>
-<script type="text/javascript" src="/__PUBLIC__/Home/js/bundle.js"></script>
+{{--<script type="text/javascript" src="/__PUBLIC__/Home/js/bundle.js"></script>--}}
 
 <!--<script src="/__PUBLIC__/Home/js/jquery.pjax.min.js"></script>-->
 <!--<script src="/__PUBLIC__/Home/js/jquery.lazyload.min.js"></script>-->
@@ -731,7 +677,7 @@
 <!--<script src="/__PUBLIC__/Home/js/bootstrap.min.js"></script>-->
 <!--<script src="/__PUBLIC__/Home/js/layer.min.js"></script>-->
 <!--<script src="/__PUBLIC__/Home/js/nprogress.min.js"></script>-->
-{{--<script src="/__PUBLIC__/Home/js/swiper.jquery.min.js"></script>--}}
+<!--<script src="/__PUBLIC__/Home/js/swiper.jquery.min.js"></script>-->
 
 <script type="text/javascript" src="/__PUBLIC__/Home/js/base.min.js"></script>
 <script src="/__PUBLIC__/Home/js/gt.js"></script>
@@ -743,7 +689,7 @@
 <!--<script src="/__PUBLIC__/Home/js/inotify.min.js"></script>-->
 
 <link rel="stylesheet" type="text/css" href="/__PUBLIC__/Home/css/wangeditor.min.css">
-{{--<script type="text/javascript" src="/__PUBLIC__/Home/js/wangeditor.min.js"></script>--}}
+<script type="text/javascript" src="/__PUBLIC__/Home/js/wangeditor.min.js"></script>
 
 <script type="text/javascript">
 // var iNotify = new iNotify({

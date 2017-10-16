@@ -44,7 +44,6 @@
     <script src="__PUBLIC__/Home/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<a href="{{url('addcart',$goods->goods_id)}}">加入购物车</a>
 <body style="width:expression(document.body.clientWidth <= 1240? '1240px': 'auto');">
 
 <div id="supportBrowser"

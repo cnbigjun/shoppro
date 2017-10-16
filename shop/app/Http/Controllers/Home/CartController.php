@@ -37,6 +37,7 @@ class CartController extends Controller
         $cartItem->save();
 //        $cartdrop=CartItem::where('goods_id','=',$goods_id)->first();
 //        $cartdrop->delete();
+//        exit;
         return redirect('/cart');
 
     }
@@ -55,8 +56,10 @@ class CartController extends Controller
         $total=0;
         foreach ($items as $item){
             $total+=$item->good->plus_price;
+            $cart_id=$item->cart_id;
             $number+=1;
         }
+//        print_r($cart_id);exit;
         return view('home.cart',['items'=>$items,'total'=>$total,'number'=>$number]);
     }
 

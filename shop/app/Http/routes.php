@@ -116,4 +116,7 @@ Route::get('/member','Home\MemController@index');
 
 //订单类
 Route::get('/order','Home\MemController@order');
+//Route::get('/pay/{cart_id}','Home\MemController@pay');
+Route::post('/pay/{cart_id}','Home\MemController@pay');
+Route::post('/paydone/{cart_id}','Home\MemController@payDone');
 
