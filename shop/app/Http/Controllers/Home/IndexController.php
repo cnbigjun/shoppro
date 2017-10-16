@@ -20,7 +20,7 @@ class IndexController extends Controller
     {
     	$goods = Good::where('is_on_sale',1)->take(16)->get();
     	$categorys = Category::where('parent_id',0)->get();
-        return view('home.index',['goods'=>$goods,'categorys'=>$categorys]);
+        return view('home/index',['goods'=>$goods,'categorys'=>$categorys]);
     }
 
 }
