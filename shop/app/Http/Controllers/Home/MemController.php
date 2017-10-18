@@ -15,7 +15,7 @@ class MemController extends Controller
     public function index(){
         return view('home/member');
     }
-    public function order(){
+    public function order(Request $req){
         $cart = Cart::where('user_id',Auth::user()->id)->first();
 
         if(!$cart){
@@ -45,7 +45,7 @@ class MemController extends Controller
         $row['v_url']='http://zh.com/paydone/'.$cart_id;
         $row['key']='DJFKklslkdf%78ew9@@@@';
         $row['v_md5info']=strtoupper(md5(implode('',$row)));
-        $items=CartItem::where('cart_id','=',$cart_id)->get();
+        $row['items']=CartItem::where('cart_id','=',$cart_id)->get();
         return view('home.pay',$row);
 
     }

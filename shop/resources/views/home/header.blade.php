@@ -40,7 +40,9 @@
 
                 @endif
                 <li class="topbar-order-msg">
-                    <a class="topbar-link" href="{{url('cart')}}">购物车</a>
+                    <a class="topbar-link" href="{{url('cart')}}">购物车@if(Session::has('cartnum'))
+                            (&nbsp;<span>{{Session::get('cartnum')}}</span>&nbsp;)
+                        @endif</a>
                 </li>
             </ul>
             <div class="topbar-info-pop"></div>

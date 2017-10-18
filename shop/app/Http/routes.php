@@ -89,6 +89,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 // 首页路由
 Route::get('/','Home\IndexController@index');
+Route::get('/home','Home\IndexController@index');
 
 // 商品栏目
 Route::get('catlist/{cat_id}','Home\CatController@catlist');

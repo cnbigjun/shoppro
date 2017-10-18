@@ -21,7 +21,7 @@ class CartController extends Controller
         $this->middleware('auth');
     }
 
-    public function addCart ($goods_id){
+    public function addCart (Request $req,$goods_id){
 
         $cart = Cart::where('user_id',Auth::user()->id)->first();
 
@@ -42,7 +42,7 @@ class CartController extends Controller
 
     }
 
-    public function showCart(){
+    public function showCart(Request $req){
         $cart = Cart::where('user_id',Auth::user()->id)->first();
 
         if(!$cart){
@@ -59,11 +59,12 @@ class CartController extends Controller
             $cart_id=$item->cart_id;
             $number+=1;
         }
+        $req->session()->put('cartnum', $number);
 //        print_r($cart_id);exit;
         return view('home.cart',['items'=>$items,'total'=>$total,'number'=>$number]);
     }
 
-    public function removeItem($id){
+    public function removeItem(Request $req,$id){
 
         CartItem::destroy($id);
         return redirect('/cart');
