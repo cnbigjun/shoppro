@@ -17,7 +17,7 @@
 
     <!--<link href="__PUBLIC__/Home/css/bootstrap.min.css" rel="stylesheet">-->
     <!--<link href="__PUBLIC__/Home/css/nprogress.min.css" rel="stylesheet">-->
-    <!--<link href="__PUBLIC__/Home/css/swiper.min.css" rel="stylesheet">-->
+    {{--<link href="__PUBLIC__/Home/css/swiper.min.css" rel="stylesheet">--}}
 
     <link rel="stylesheet" href="/__PUBLIC__/Home/css/base.min.css">
     <link rel="stylesheet" href="/__PUBLIC__/Home/css/iconfont.css">
@@ -399,56 +399,82 @@
                     <div class="tab-pane fade in active" id="detail" style="text-align: center">
                         <!--                     <p><br></p><p><img src="/__PUBLIC__/Home/images/f133ffe0-1dc1-11e7-b91b-953390e2cc9a.png" alt="lALOvErQe80cLs0EsA_1200_7214" style="max-width:100%;"><br></p>
                         <p><br></p> -->
+                        @for($i=0;$i<count(explode(',',$goods->goods_img));$i++)
+                        <img src="/upload/{{explode(',',$goods->goods_img)[$i]}}" alt="" style="display: block">
+                        @endfor
                         {{$goods->goods_desc}}
                     </div>
-                    <div class="tab-pane fade in" id="function"><p><br></p></div>
-                    <div class="tab-pane fade in" id="params">laravel商城构建</div>
+                    <div class="tab-pane fade in" id="function">
+                        {{$goods->goods_keywords}}
+                    </div>
+                    <div class="tab-pane fade in" id="params">
+                        {{$goods->goods_desc}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function(){
+            $(".nav.nav-tabs li").each(function(index){
+                //index是li数组的的索引值
+                $(this).click(function(){
+                    var liNode = $(this);
+                    //延迟是为了减少服务器压力，防止鼠标快速滑动
+                        //将原来显示的div隐藏掉
+                        $("div.active").removeClass("active");
+                        //将原来的li的myLi去掉
+                        $("li.active").removeClass("active");
+                        //显示当前鼠标li的对应的div
+                        $(".tab-pane.fade.in").eq(index).addClass("active");
+                        console.log(index);
+                        //增加当前li的myLi
+                        liNode.addClass("active");
 
-            $('.qrcode > .iconfont.icon-demo').hover(function () {
-                if ($('.qrcode-demo-show').is(':hidden')) {
-                    $('.qrcode-demo-show').show();
-                }
-            }, function () {
-                if ($('.qrcode-demo-show').is(':visible')) {
-                    $('.qrcode-demo-show').hide();
-                }
+                })
             });
-
-            var viewSwiper = new Swiper('#view .swiper-container', {
-                paginationClickable: true,
-                direction: 'vertical',
-                onSlideChangeStart: function () {
-                    updateNavPosition()
-                }
-            });
-
-            var previewSwiper = new Swiper('#preview .swiper-container', {
-                slidesPerView: 3,
-                direction: 'vertical',
-                onSlideClick: function () {
-                    viewSwiper.swipeTo(previewSwiper.clickedSlideIndex)
-                }
-            });
-
-            function updateNavPosition() {
-                $('.preview .active-nav').removeClass('active-nav')
-                var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav')
-                if (!activeNav.hasClass('swiper-slide-visible')) {
-                    if (activeNav.index() > previewSwiper.activeIndex) {
-                        var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1
-                        previewSwiper.swipeTo(activeNav.index() - thumbsPerNav)
-                    } else {
-                        previewSwiper.swipeTo(activeNav.index())
-                    }
-                }
-            }
-        })
+        });
+//        $(document).ready(function () {
+//
+//            $('.qrcode > .iconfont.icon-demo').hover(function () {
+//                if ($('.qrcode-demo-show').is(':hidden')) {
+//                    $('.qrcode-demo-show').show();
+//                }
+//            }, function () {
+//                if ($('.qrcode-demo-show').is(':visible')) {
+//                    $('.qrcode-demo-show').hide();
+//                }
+//            });
+//
+//            var viewSwiper = new Swiper('#view .swiper-container', {
+//                paginationClickable: true,
+//                direction: 'vertical',
+//                onSlideChangeStart: function () {
+//                    updateNavPosition()
+//                }
+//            });
+//
+//            var previewSwiper = new Swiper('#preview .swiper-container', {
+//                slidesPerView: 3,
+//                direction: 'vertical',
+//                onSlideClick: function () {
+//                    viewSwiper.swipeTo(previewSwiper.clickedSlideIndex)
+//                }
+//            });
+//
+//            function updateNavPosition() {
+//                $('.preview .active-nav').removeClass('active-nav')
+//                var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav')
+//                if (!activeNav.hasClass('swiper-slide-visible')) {
+//                    if (activeNav.index() > previewSwiper.activeIndex) {
+//                        var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1
+//                        previewSwiper.swipeTo(activeNav.index() - thumbsPerNav)
+//                    } else {
+//                        previewSwiper.swipeTo(activeNav.index())
+//                    }
+//                }
+//            }
+//        })
     </script>
 
 </div>
@@ -582,15 +608,14 @@
 <div style="display:none">
     <script src="/__PUBLIC__/Home/js/stat.js" language="JavaScript"></script>
 </div>
-<script type="text/javascript" src="/__PUBLIC__/Home/js/bundlex.js"></script>
-
-<!--<script src="__PUBLIC__/Home/js/jquery.pjax.min.js"></script>-->
+{{--<script type="text/javascript" src="/__PUBLIC__/Home/js/bundle.js"></script>--}}
+{{--<script src="__PUBLIC__/Home/js/jquery.pjax.min.js"></script>--}}
 <!--<script src="__PUBLIC__/Home/js/jquery.lazyload.min.js"></script>-->
 <!--<script src="__PUBLIC__/Home/js/jquery.form.min.js"></script>-->
 <!--<script src="__PUBLIC__/Home/js/bootstrap.min.js"></script>-->
 <!--<script src="__PUBLIC__/Home/js/layer.min.js"></script>-->
 <!--<script src="__PUBLIC__/Home/js/nprogress.min.js"></script>-->
-<!--<script src="__PUBLIC__/Home/js/swiper.jquery.min.js"></script>-->
+{{--<script src="__PUBLIC__/Home/js/swiper.jquery.min.js"></script>--}}
 
 <script type="text/javascript" src="/__PUBLIC__/Home/js/base.min.js"></script>
 <script src="/__PUBLIC__/Home/js/gt.js"></script>
@@ -605,28 +630,7 @@
 <script type="text/javascript" src="/__PUBLIC__/Home/js/wangeditor.min.js"></script>
 
 <script type="text/javascript">
-    // var iNotify = new iNotify({
-    //     effect: 'flash',
-    //     interval: 500,
-    //     message:"有消息拉！2",
-    //     audio:{
-    //         file: ['/home/sound/alert.mp3']
-    //     },
-    //     notification:{
-    //         title:"通知！",
-    //         body:'您来了一条新消息'
-    //     }
-    // });
 
-    // $(function(){
-    //     $.ajax({
-    //         type: "get",
-    //         url: '/home/public/feedback/notify',
-    //         success: function(data){
-    //             console.log(data);
-    //         }
-    //     });
-    // });
 </script>
 
 </body>

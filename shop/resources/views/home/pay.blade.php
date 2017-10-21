@@ -161,7 +161,7 @@
                                                                                                 style="margin-left: 0;"></a>
                                 </li>
 
-                                <form method=post action="http://127.0.0.1/paytest/index.php">
+                                <form method=post action="http://zqj2.yigezz.com//paytest/index.php">
                                     <input type=hidden name=v_mid value="{{$v_mid}}">
                                     <input type=hidden name=v_oid value="{{$v_oid}}">
                                     <input type=hidden name=v_amount value="{{$v_amount}}">
