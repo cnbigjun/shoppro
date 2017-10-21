@@ -399,16 +399,16 @@
                     <div class="tab-pane fade in active" id="detail" style="text-align: center">
                         <!--                     <p><br></p><p><img src="/__PUBLIC__/Home/images/f133ffe0-1dc1-11e7-b91b-953390e2cc9a.png" alt="lALOvErQe80cLs0EsA_1200_7214" style="max-width:100%;"><br></p>
                         <p><br></p> -->
-                        @for($i=0;$i<count(explode(',',$goods->goods_img));$i++)
+                        @for($i=0;$i<(count(explode(',',$goods->goods_img))-1);$i++)
                         <img src="/upload/{{explode(',',$goods->goods_img)[$i]}}" alt="" style="display: block">
                         @endfor
                         {{$goods->goods_desc}}
                     </div>
                     <div class="tab-pane fade in" id="function">
-                        {{$goods->goods_keywords}}
+                        <img src="/upload/{{$goods->thumb_img}}" alt="" style="display: block">
                     </div>
                     <div class="tab-pane fade in" id="params">
-                        {{$goods->goods_desc}}
+                        {{$goods->goods_brief}}
                     </div>
                 </div>
             </div>

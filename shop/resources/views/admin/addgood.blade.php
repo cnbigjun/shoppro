@@ -61,11 +61,12 @@
                         <td style="text-align:right;">产品分类：</td>
                         <td>
                             <select class="textBox" name="cat_id">
-                                <option value="0">顶层分类</option>
-                                <option value="1">娱乐陪护</option>
-                                <option value="2">智能出行</option>
-                                <option value="3">智能清洁</option>
-                                <option value="4">智能视界</option>
+                                <option value="1">商城系统</option>
+                                <option value="2">微信营销</option>
+                                <option value="3">博客论坛</option>
+                                <option value="3">企业官网</option>
+                                <option value="12">其他源码</option>
+                                <option value="3">人工服务</option>
                             </select>
                         </td>
                     </tr>
@@ -95,7 +96,7 @@
                         <td><input type="text" class="textBox length-long" name="goods_keywords"/></td>
                     </tr>
                     <tr>
-                        <td style="text-align:right;">产品描述：</td>
+                        <td style="text-align:right;">技术参数：</td>
                         <td><input type="text" class="textBox length-long" name="goods_brief"/></td>
                     </tr>
                     <tr>
@@ -140,7 +141,7 @@
                     </tr>
 
                     <tr>
-                        <td style="text-align:right;">产品详情：</td>
+                        <td style="text-align:right;">产品描述：</td>
                         <td><textarea class="textarea tdmargin" name="goods_desc"></textarea></td>
                     </tr>
                     <tr>
