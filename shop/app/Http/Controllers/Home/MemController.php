@@ -54,8 +54,11 @@ class MemController extends Controller
         if ($md5!==$req->v_md5str) {
             return redirect('/');
         }
-        return '订单支付成功';
+        $cart = Cart::where('user_id',Auth::user()->id)->first();
+        $req->session()->put('cartnum', 0);
+        return $cart->delete()?redirect('/'):'订单支付失败';
 //        return redirect('/');
+
     }
 
 
